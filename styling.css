@@ -1,30 +1,69 @@
 body{
-    background-color: lightblue;
+    background-color: #002157;
+    margin: auto;
 }
-
+/*#1e9cd7*/
 .heading{
+    color: white;
     margin: auto;
     line-height: 2;
     text-align: center;
     text-transform: uppercase;
-    background-color: red;
+    background-color: #002157;
+    border-bottom: 1px white solid;
 }
-nav {
-    background-color: yellow;
-    list-style-type: none;
-    text-align: center; 
-    width: 20%;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav li {
-    display: block;
-    font-size: 20px;
-    padding: 20px;
-  }
 
-  nav ul li a{
-      text-align: left;
-  }
-  
+/*navigation*/
+nav{
+    background-color: #ffffff;
+    width: 25%;
+    overflow: hidden;
+}
+nav ul{
+    list-style: none;
+    text-align: left;
+    margin: auto;
+    margin-left: -30px;
+    width: 100%;
+}
+nav ul li{
+    list-style: none;
+    width: 100%;
+    margin-left: -50px;
+}
+nav ul li a{
+    width: 100%;
+    display: block;
+    color: #002157;
+    text-align: left;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+nav a:hover{
+    background-color: #002157;
+    color: #ffffff;
+}
+
+/*main content*/
+main{
+    float: right;
+    width: 73%;
+    top: 0;
+    border-bottom: 1px red solid;
+}
+
+/*clear both left and right floating*/
+.clear{
+    clear: both;
+}
+
+/*Footer*/
+footer{
+    color: white;
+    margin: auto;
+    line-height: 2;
+    text-align: center;
+    text-transform: uppercase;
+}
