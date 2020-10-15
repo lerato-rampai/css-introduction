@@ -1,21 +1,22 @@
 body{
-    background-color: #002157;
+    background-color: #ffffff;
     margin: auto;
 }
 /*#1e9cd7*/
 .heading{
     color: white;
     margin: auto;
-    line-height: 2;
     text-align: center;
     text-transform: uppercase;
     background-color: #002157;
+    padding: 1px;
     border-bottom: 1px white solid;
 }
 
 /*navigation*/
 nav{
-    background-color: #ffffff;
+    float:left;
+    background-color: #1e9cd7;
     width: 25%;
     overflow: hidden;
 }
@@ -48,9 +49,9 @@ nav a:hover{
 
 /*main content*/
 main{
-    float: right;
-    width: 73%;
-    top: 0;
+    float:left;
+    width: 70%;
+    padding:0 20px;
     border-bottom: 1px red solid;
 }
 
@@ -59,11 +60,17 @@ main{
     clear: both;
 }
 
-/*Footer*/
 footer{
-    color: white;
-    margin: auto;
-    line-height: 2;
-    text-align: center;
-    text-transform: uppercase;
+    color: #ffffff;
+    background-color:#002157;
+    text-align:center;
+    padding:1px;
+}
+
+/*responsiveness*/
+@media only screen and (max-width: 620px){
+    /*For mobile phones*/
+    nav, main{
+        width: 100%;
+    }
 }
