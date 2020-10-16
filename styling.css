@@ -10,7 +10,6 @@ body{
     text-transform: uppercase;
     background-color: #002157;
     padding: 1px;
-    border-bottom: 1px white solid;
 }
 
 /*navigation*/
@@ -52,12 +51,12 @@ main{
     float:left;
     width: 70%;
     padding:0 20px;
-    border-bottom: 1px red solid;
 }
 
-/*clear both left and right floating*/
-.clear{
-    clear: both;
+/*main content h2 headings*/
+h2{
+    text-align: center;
+    color: #002157;
 }
 
 footer{
