@@ -549,7 +549,7 @@
                         <header>
                             <h2>CSS Text</h2>
                         </header>
-                        <h3>TEXT FORMATTING</h3>
+                        <h3>Text Formatting</h3>
                         <p>Text is styled with some of the text formatting properties.</p>
                         <ul>
                             <li>text-align</li>
@@ -572,7 +572,7 @@
                 <section id="fonts">
                     <article>
                         <header>
-                            <h2>CSS Fonts/h2>
+                            <h2>CSS Fonts</h2>
                         </header>
                         <p>The CSS font properties define the font family, boldness, size, and the style of a text.</p>
                         <p>Difference Between Serif and Sans-serif Fonts</p>
@@ -607,32 +607,291 @@
                     </article>
                 </section>
 
- .
+                <section id="icons">
+                    <article>
+                        <header>
+                            <h2>CSS Icons</h2>
+                        </header>
+                        <h3>How To Add Icons</h3>
+                        <p>The simplest way to add an icon to your HTML page, is with an icon library, such as Font Awesome.</p>
+                        <p>Add the name of the specified icon class to any inline HTML element (like <i> or <span>).</p>
+                        <p>All the icons in the icon libraries below, are scalable vectors that can be customized with CSS
+                         (size, color, shadow, etc.)</p>
+
+                        <h3>Font Awesome Icons</h3>
+                        <p>To use the Font Awesome icons, go to fontawesome.com, sign in, and get a code to add in the <head>
+                         section of your HTML page:</p>
+                        <p><script src="https://kit.fontawesome.com/yourcode.js"></script></p>
+                        <p><b>Note:</b> No downloading or installation is required!</p>
+
+                        <h3>Bootstrap Icons</h3>
+                        <p>To use the Bootstrap glyphicons, add the following line inside the <head> section of your HTML page:</p>
+                        <p><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></p>
+                        <p><b>Note:</b> No downloading or installation is required!</p>
+
+                        <h3>Google Icons</h3>
+                        <p>To use the Google icons, add the following line inside the <head> section of your HTML page:</p>
+                        <p><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></p>
+                        <p><b>Note:</b> No downloading or installation is required!</p>
+                    </article>
+                </section>
+
+                <section id="links">
+                    <article>
+                        <header>
+                            <h2>CSS Links</h2>
+                        </header>
+                        <p>With CSS, links can be styled in different ways.</p>
+                        <p>Text Link Text Link Link Button Link Button</p>
+
+                        <h3>Styling Links</h3>
+                        <p>Links can be styled with any CSS property (e.g. color, font-family, background, etc.).</p>
+
+                        <h3>Four Links States</h3>
+                        <ol>
+                          <li>a:link - a normal, unvisited link</li>
+                          <li>a:visited - a link the user has visited</li>
+                          <li>a:hover - a link when the user mouses over it</li>
+                          <li>a:active - a link the moment it is clicked</li>
+                        </ol>
+
+                        <h3>Styling Several Links States Rules</h3>
+                        <ul>
+                          <li>a:hover MUST come after a:link and a:visited</li>
+                          <li>a:active MUST come after a:hover</li>
+                        </ul>
+
+                        <h3>Text Decoration</h3>
+                        <p>The text-decoration property is mostly used to remove underlines from links</p>
+
+                        <h3>Background Color</h3>
+                        <p>The background-color property can be used to specify a background color for links</p>
+
+                        <h3>Link Buttons</h3>
+                        <p>We combine several CSS properties to display links as boxes/buttons</p>
+                    </article>
+                </section>
+
+                <section id="lists">
+                    <article>
+                        <header>
+                            <h2>CSS Lists</h2>
+                        </header>
+                        <h3>HTML Lists and CSS List Properties</h3>
+                        <p>In HTML, there are two main types of lists:</p>
+                        <ol>
+                          <li>unordered lists (<ul>) - the list items are marked with bullets</li>
+                          <li>ordered lists (<ol>) - the list items are marked with numbers or letters</li>
+                        </ol>
+
+                        <h3>CSS List Properties</h3>
+                        <ul>
+                          <li>Set different list item markers for ordered lists</li>
+                          <li>Set different list item markers for unordered lists</li>
+                          <li>Set an image as the list item marker</li>
+                          <li>Add background colors to lists and list items</li>
+                        </ul>
+
+                        <h3>Different List Item Markers</h3>
+                        <p>The list-style-type property specifies the type of list item marker.</p>
+                        <ul>
+                          <li>list-style-type: circle</li>
+                          <li>list-style-type: square</li>
+                          <li>list-style-type: upper-roman</li>
+                          <li>list-style-type: lower-alpha</li>
+                        </ul>
+                        <p><b>Note:</b> Some of the values are for unordered lists, and some for ordered lists.</p>
+
+                        <h3>An Image as The List Item Marker</h3>
+                        <p>The list-style-image property specifies an image as the list item marker</p>
+                    </article>
+                </section>
+Position The List Item Markers
+The list-style-position property specifies the position of the list-item markers (bullet points).
+"list-style-position: outside;" means that the bullet points will be outside the list item. The start of each line of a list item will be aligned vertically. This is default:
+•	Coffee - A brewed drink prepared from roasted coffee beans...
+•	Tea
+•	Coca-cola
+"list-style-position: inside;" means that the bullet points will be inside the list item. As it is part of the list item, it will be part of the text and push the text at the start:
+•	Coffee - A brewed drink prepared from roasted coffee beans...
+•	Tea
+•	Coca-cola
+Example
+ul.a {
+  list-style-position: outside;
+}
+
+ul.b {
+  list-style-position: inside;
+}
+Try it Yourself »
+Remove Default Settings
+The list-style-type:none property can also be used to remove the markers/bullets. Note that the list also has default margin and padding. To remove this, add margin:0 and padding:0 to <ul> or <ol>:
+Example
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+Try it Yourself »
+List - Shorthand property
+The list-style property is a shorthand property. It is used to set all the list properties in one declaration:
+Example
+ul {
+  list-style: square inside url("sqpurple.gif");
+}
+Try it Yourself »
+When using the shorthand property, the order of the property values are:
+•	list-style-type (if a list-style-image is specified, the value of this property will be displayed if the image for some reason cannot be displayed)
+•	list-style-position (specifies whether the list-item markers should appear inside or outside the content flow)
+•	list-style-image (specifies an image as the list item marker)
+If one of the property values above are missing, the default value for the missing property will be inserted, if any.
+Styling List With Colors
+We can also style lists with colors, to make them look a little more interesting.
+Anything added to the <ol> or <ul> tag, affects the entire list, while properties added to the <li> tag will affect the individual list items:
 
 
 
+CSS Tables
+The look of an HTML table can be greatly improved with CSS:
+Company	Contact	Country
+Alfreds Futterkiste	Maria Anders	Germany
+Berglunds snabbköp	Christina Berglund	Sweden
+Centro comercial Moctezuma	Francisco Chang	Mexico
+Ernst Handel	Roland Mendel	Austria
+Island Trading	Helen Bennett	UK
+Königlich Essen	Philip Cramer	Germany
+Laughing Bacchus Winecellars	Yoshi Tannamuri	Canada
+Magazzini Alimentari Riuniti	Giovanni Rovelli	Italy
 
+Try it Yourself »
+________________________________________
+Table Borders
+To specify table borders in CSS, use the border property.
+The example below specifies a black border for <table>, <th>, and <td> elements:
+Example
+table, th, td {
+  border: 1px solid black;
+}
+Try it Yourself »
+Notice that the table in the example above has double borders. This is because both the table and the <th> and <td> elements have separate borders.
+Collapse Table Borders
+The border-collapse property sets whether the table borders should be collapsed into a single border:
+Example
+table {
+  border-collapse: collapse;
+}
 
-CSS Icons
-How To Add Icons
-The simplest way to add an icon to your HTML page, is with an icon library, such as Font Awesome.
-Add the name of the specified icon class to any inline HTML element (like <i> or <span>).
-All the icons in the icon libraries below, are scalable vectors that can be customized with CSS (size, color, shadow, etc.)
-Font Awesome Icons
-To use the Font Awesome icons, go to fontawesome.com, sign in, and get a code to add in the <head> section of your HTML page:
-<script src="https://kit.fontawesome.com/yourcode.js"></script>
-Read more about how to get started with Font Awesome in our Font Awesome 5 tutorial.
-Note: No downloading or installation is required!
+table, th, td {
+  border: 1px solid black;
+}
+Try it Yourself »
+If you only want a border around the table, only specify the border property for <table>:
+Example
+table {
+  border: 1px solid black;
+}
+Try it Yourself »
+________________________________________Table Width and Height
+Width and height of a table are defined by the width and height properties.
+The example below sets the width of the table to 100%, and the height of the <th> elements to 50px:
+Example
+table {
+  width: 100%;
+}
 
-Bootstrap Icons
-To use the Bootstrap glyphicons, add the following line inside the <head> section of your HTML page:
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-Note: No downloading or installation is required!
+th {
+  height: 50px;
+}
+Try it Yourself »
+Horizontal Alignment
+The text-align property sets the horizontal alignment (like left, right, or center) of the content in <th> or <td>.
+By default, the content of <th> elements are center-aligned and the content of <td> elements are left-aligned.
+The following example left-aligns the text in <th> elements:
+Example
+th {
+  text-align: left;
+}
+Try it Yourself »
+Vertical Alignment
+The vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in <th> or <td>.
+By default, the vertical alignment of the content in a table is middle (for both <th> and <td> elements).
+The following example sets the vertical text alignment to bottom for <td> elements:
+Example
+td {
+  height: 50px;
+  vertical-align: bottom;
+}
+Try it Yourself »
+Table Padding
+To control the space between the border and the content in a table, use the padding property on <td> and <th> elements:
+Example
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+Try it Yourself »
+________________________________________
+Horizontal Dividers
+First Name	Last Name	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Add the border-bottom property to <th> and <td> for horizontal dividers:
+Example
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+Try it Yourself »
+________________________________________
+Hoverable Table
+Use the :hover selector on <tr> to highlight table rows on mouse over:
+First Name	Last Name	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Example
+tr:hover {background-color: #f5f5f5;}
+Try it Yourself »
+________________________________________
+Striped Tables
+First Name	Last Name	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
+Example
+tr:nth-child(even) {background-color: #f2f2f2;}
+Try it Yourself »
+Table Color
+The example below specifies the background color and text color of <th> elements:
+First Name	Last Name	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Example
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+Try it Yourself »
+Responsive Table
+A responsive table will display a horizontal scroll bar if the screen is too small to display the full content:
+First Name	Last Name	Points	Points	Points	Points	Points	Points	Points	Points	Points	Points	Points	Points
+Jill	Smith	50	50	50	50	50	50	50	50	50	50	50	50
+Eve	Jackson	94	94	94	94	94	94	94	94	94	94	94	94
+Adam	Johnson	67	67	67	67	67	67	67	67	67	67	67	67
+Add a container element (like <div>) with overflow-x:auto around the <table> element to make it responsive:
+Example
+<div style="overflow-x:auto;">
 
-Google Icons
-To use the Google icons, add the following line inside the <head> section of your HTML page:
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-Note: No downloading or installation is required!
+<table>
+... table content ...
+</table>
+
+</div>
+Try it Yourself »
+Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).
 
 <section id="introduction">
                     <article>
@@ -1074,356 +1333,11 @@ Note: No downloading or installation is required!
                         <p>With an external stylesheet file, you can change the look of an entire website by changing 
                         just one file!</p>
                     </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
 
 
 
 
 
-CSS Links
-With CSS, links can be styled in different ways.
-Text Link Text Link Link Button Link Button
-Styling Links
-Links can be styled with any CSS property (e.g. color, font-family, background, etc.).
-
-In addition, links can be styled differently depending on what state they are in.
-The four links states are:
-•	a:link - a normal, unvisited link
-•	a:visited - a link the user has visited
-•	a:hover - a link when the user mouses over it
-•	a:active - a link the moment it is clicked
-
-When setting the style for several link states, there are some order rules:
-•	a:hover MUST come after a:link and a:visited
-•	a:active MUST come after a:hover
-________________________________________Text Decoration
-The text-decoration property is mostly used to remove underlines from links:
-
-Background Color
-The background-color property can be used to specify a background color for links:
-
-Link Buttons
-This example demonstrates a more advanced example where we combine several CSS properties to display links as boxes/buttons:
-
-
-
-CSS Lists
-Unordered Lists:
-o	Coffee
-o	Tea
-o	Coca Cola
-	Coffee
-	Tea
-	Coca Cola
-Ordered Lists:
-1.	Coffee
-2.	Tea
-3.	Coca Cola
-I.	Coffee
-II.	Tea
-III.	Coca Cola
-HTML Lists and CSS List Properties
-In HTML, there are two main types of lists:
-•	unordered lists (<ul>) - the list items are marked with bullets
-•	ordered lists (<ol>) - the list items are marked with numbers or letters
-The CSS list properties allow you to:
-•	Set different list item markers for ordered lists
-•	Set different list item markers for unordered lists
-•	Set an image as the list item marker
-•	Add background colors to lists and list items
-Different List Item Markers
-The list-style-type property specifies the type of list item marker.
-The following example shows some of the available list item markers:
-Example
-ul.a {
-  list-style-type: circle;
-}
-
-ul.b {
-  list-style-type: square;
-}
-
-ol.c {
-  list-style-type: upper-roman;
-}
-
-ol.d {
-  list-style-type: lower-alpha;
-}
-Try it Yourself »
-Note: Some of the values are for unordered lists, and some for ordered lists.
-________________________________________An Image as The List Item Marker
-The list-style-image property specifies an image as the list item marker:
-Example
-ul {
-  list-style-image: url('sqpurple.gif');
-}
-Try it Yourself »
-Position The List Item Markers
-The list-style-position property specifies the position of the list-item markers (bullet points).
-"list-style-position: outside;" means that the bullet points will be outside the list item. The start of each line of a list item will be aligned vertically. This is default:
-•	Coffee - A brewed drink prepared from roasted coffee beans...
-•	Tea
-•	Coca-cola
-"list-style-position: inside;" means that the bullet points will be inside the list item. As it is part of the list item, it will be part of the text and push the text at the start:
-•	Coffee - A brewed drink prepared from roasted coffee beans...
-•	Tea
-•	Coca-cola
-Example
-ul.a {
-  list-style-position: outside;
-}
-
-ul.b {
-  list-style-position: inside;
-}
-Try it Yourself »
-Remove Default Settings
-The list-style-type:none property can also be used to remove the markers/bullets. Note that the list also has default margin and padding. To remove this, add margin:0 and padding:0 to <ul> or <ol>:
-Example
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-Try it Yourself »
-List - Shorthand property
-The list-style property is a shorthand property. It is used to set all the list properties in one declaration:
-Example
-ul {
-  list-style: square inside url("sqpurple.gif");
-}
-Try it Yourself »
-When using the shorthand property, the order of the property values are:
-•	list-style-type (if a list-style-image is specified, the value of this property will be displayed if the image for some reason cannot be displayed)
-•	list-style-position (specifies whether the list-item markers should appear inside or outside the content flow)
-•	list-style-image (specifies an image as the list item marker)
-If one of the property values above are missing, the default value for the missing property will be inserted, if any.
-Styling List With Colors
-We can also style lists with colors, to make them look a little more interesting.
-Anything added to the <ol> or <ul> tag, affects the entire list, while properties added to the <li> tag will affect the individual list items:
-Example
-ol {
-  background: #ff9999;
-  padding: 20px;
-}
-
-ul {
-  background: #3399ff;
-  padding: 20px;
-}
-
-ol li {
-  background: #ffe5e5;
-  padding: 5px;
-  margin-left: 35px;
-}
-
-ul li {
-  background: #cce5ff;
-  margin: 5px;
-}
-
-
-CSS Tables
-The look of an HTML table can be greatly improved with CSS:
-Company	Contact	Country
-Alfreds Futterkiste	Maria Anders	Germany
-Berglunds snabbköp	Christina Berglund	Sweden
-Centro comercial Moctezuma	Francisco Chang	Mexico
-Ernst Handel	Roland Mendel	Austria
-Island Trading	Helen Bennett	UK
-Königlich Essen	Philip Cramer	Germany
-Laughing Bacchus Winecellars	Yoshi Tannamuri	Canada
-Magazzini Alimentari Riuniti	Giovanni Rovelli	Italy
-
-Try it Yourself »
-________________________________________
-Table Borders
-To specify table borders in CSS, use the border property.
-The example below specifies a black border for <table>, <th>, and <td> elements:
-Example
-table, th, td {
-  border: 1px solid black;
-}
-Try it Yourself »
-Notice that the table in the example above has double borders. This is because both the table and the <th> and <td> elements have separate borders.
-Collapse Table Borders
-The border-collapse property sets whether the table borders should be collapsed into a single border:
-Example
-table {
-  border-collapse: collapse;
-}
-
-table, th, td {
-  border: 1px solid black;
-}
-Try it Yourself »
-If you only want a border around the table, only specify the border property for <table>:
-Example
-table {
-  border: 1px solid black;
-}
-Try it Yourself »
-________________________________________Table Width and Height
-Width and height of a table are defined by the width and height properties.
-The example below sets the width of the table to 100%, and the height of the <th> elements to 50px:
-Example
-table {
-  width: 100%;
-}
-
-th {
-  height: 50px;
-}
-Try it Yourself »
-Horizontal Alignment
-The text-align property sets the horizontal alignment (like left, right, or center) of the content in <th> or <td>.
-By default, the content of <th> elements are center-aligned and the content of <td> elements are left-aligned.
-The following example left-aligns the text in <th> elements:
-Example
-th {
-  text-align: left;
-}
-Try it Yourself »
-Vertical Alignment
-The vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in <th> or <td>.
-By default, the vertical alignment of the content in a table is middle (for both <th> and <td> elements).
-The following example sets the vertical text alignment to bottom for <td> elements:
-Example
-td {
-  height: 50px;
-  vertical-align: bottom;
-}
-Try it Yourself »
-Table Padding
-To control the space between the border and the content in a table, use the padding property on <td> and <th> elements:
-Example
-th, td {
-  padding: 15px;
-  text-align: left;
-}
-Try it Yourself »
-________________________________________
-Horizontal Dividers
-First Name	Last Name	Savings
-Peter	Griffin	$100
-Lois	Griffin	$150
-Joe	Swanson	$300
-Add the border-bottom property to <th> and <td> for horizontal dividers:
-Example
-th, td {
-  border-bottom: 1px solid #ddd;
-}
-Try it Yourself »
-________________________________________
-Hoverable Table
-Use the :hover selector on <tr> to highlight table rows on mouse over:
-First Name	Last Name	Savings
-Peter	Griffin	$100
-Lois	Griffin	$150
-Joe	Swanson	$300
-Example
-tr:hover {background-color: #f5f5f5;}
-Try it Yourself »
-________________________________________
-Striped Tables
-First Name	Last Name	Savings
-Peter	Griffin	$100
-Lois	Griffin	$150
-Joe	Swanson	$300
-For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
-Example
-tr:nth-child(even) {background-color: #f2f2f2;}
-Try it Yourself »
-Table Color
-The example below specifies the background color and text color of <th> elements:
-First Name	Last Name	Savings
-Peter	Griffin	$100
-Lois	Griffin	$150
-Joe	Swanson	$300
-Example
-th {
-  background-color: #4CAF50;
-  color: white;
-}
-Try it Yourself »
-Responsive Table
-A responsive table will display a horizontal scroll bar if the screen is too small to display the full content:
-First Name	Last Name	Points	Points	Points	Points	Points	Points	Points	Points	Points	Points	Points	Points
-Jill	Smith	50	50	50	50	50	50	50	50	50	50	50	50
-Eve	Jackson	94	94	94	94	94	94	94	94	94	94	94	94
-Adam	Johnson	67	67	67	67	67	67	67	67	67	67	67	67
-Add a container element (like <div>) with overflow-x:auto around the <table> element to make it responsive:
-Example
-<div style="overflow-x:auto;">
-
-<table>
-... table content ...
-</table>
-
-</div>
-Try it Yourself »
-Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).
 
 
 
