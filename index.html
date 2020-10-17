@@ -159,7 +159,7 @@
 
                         <h3>External CSS</h3>
                         <p>With an external style sheet, you can change the look of an entire website by changing just one file!</p>
-                        <p>Each HTML page must include a reference to the external style sheet file inside the <!--<link>--> element, inside
+                        <p>Each HTML page must include a reference to the external style sheet file inside the &#60;link&#62; element, inside
                          the head section.</p>
                          <p>An external style sheet can be written in any text editor, and must be saved with a .css extension.</p>
                          <p>The external .css file should not contain any HTML tags.</p>
@@ -168,8 +168,8 @@
 
                         <h3>Internal CSS</h3>
                         <p>An internal style sheet may be used if one single HTML page has a unique style.</p>
-                        <p>The internal style is defined inside the <!--<style>--> element, inside the head section.</p>
-                        <p>Internal styles are defined within the <!--<style>--> element, inside the <head> section of an HTML page</p>
+                        <p>The internal style is defined inside the &#60;style&#62; element, inside the head section.</p>
+                        <p>Internal styles are defined within the &#60;style&#62; element, inside the <head> section of an HTML page</p>
 
                         <h3>Inline CSS</h3>
                         <p>An inline style may be used to apply a unique style for a single element.</p>
@@ -614,24 +614,24 @@
                         </header>
                         <h3>How To Add Icons</h3>
                         <p>The simplest way to add an icon to your HTML page, is with an icon library, such as Font Awesome.</p>
-                        <p>Add the name of the specified icon class to any inline HTML element (like <i> or <span>).</p>
+                        <p>Add the name of the specified icon class to any inline HTML element (like &#60;i&#62; or &#60;span&#62;).</p>
                         <p>All the icons in the icon libraries below, are scalable vectors that can be customized with CSS
                          (size, color, shadow, etc.)</p>
 
                         <h3>Font Awesome Icons</h3>
-                        <p>To use the Font Awesome icons, go to fontawesome.com, sign in, and get a code to add in the <head>
+                        <p>To use the Font Awesome icons, go to fontawesome.com, sign in, and get a code to add in the &#60;head&#62;
                          section of your HTML page:</p>
-                        <p><script src="https://kit.fontawesome.com/yourcode.js"></script></p>
+                        <p>&#60;script src="https://kit.fontawesome.com/yourcode.js"&#62;&#60;/script&#62;</p>
                         <p><b>Note:</b> No downloading or installation is required!</p>
 
                         <h3>Bootstrap Icons</h3>
                         <p>To use the Bootstrap glyphicons, add the following line inside the <head> section of your HTML page:</p>
-                        <p><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></p>
+                        <p>&#60;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&#62;</p>
                         <p><b>Note:</b> No downloading or installation is required!</p>
 
                         <h3>Google Icons</h3>
                         <p>To use the Google icons, add the following line inside the <head> section of your HTML page:</p>
-                        <p><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></p>
+                        <p>&#60;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&#62;</p>
                         <p><b>Note:</b> No downloading or installation is required!</p>
                     </article>
                 </section>
@@ -680,8 +680,8 @@
                         <h3>HTML Lists and CSS List Properties</h3>
                         <p>In HTML, there are two main types of lists:</p>
                         <ol>
-                          <li>unordered lists (<ul>) - the list items are marked with bullets</li>
-                          <li>ordered lists (<ol>) - the list items are marked with numbers or letters</li>
+                          <li>unordered lists (&#60;ul&#62;) - the list items are marked with bullets</li>
+                          <li>ordered lists (&#60;ol&#62;) - the list items are marked with numbers or letters</li>
                         </ol>
 
                         <h3>CSS List Properties</h3>
@@ -704,194 +704,376 @@
 
                         <h3>An Image as The List Item Marker</h3>
                         <p>The list-style-image property specifies an image as the list item marker</p>
+
+                        <h3>Position The List Item Markers</h3>
+                        <p>The list-style-position property specifies the position of the list-item markers (bullet points).</p>
+                        <p>"list-style-position: outside;" means that the bullet points will be outside the list item.</p>
+                        <p>The start of each line of a list item will be aligned vertically which is default:</p>
+                        <p>"list-style-position: inside;" means that the bullet points will be inside the list item.</p>
+                        <p>As it is part of the list item, it will be part of the text and push the text at the start</p>
+
+                        <h3>Remove Default Settings</h3>
+                        <p>The list-style-type:none property can also be used to remove the markers/bullets.</p>
+                        <p><b>Note</b> that the list also has default margin and padding. To remove this, add margin:0 and
+                         padding:0 to <ul> or <ol></p>
+
+                         <h3>List - Shorthand property</h3>
+                         <p>The list-style property is a shorthand property.</p>
+                         <p>It is used to set all the list properties in one declaration</p>
+                         <p>Example: list-style: square inside url("sqpurple.gif")</p>
+
+                         <h3>Shorthand Property Values</h3>
+                         <ul>
+                          <li>list-style-type (if a list-style-image is specified, the value of this property will be
+                           displayed if the image for some reason cannot be displayed)</li>
+                          <li>list-style-position (specifies whether the list-item markers should appear inside or outside
+                           the content flow)</li>
+                          <li>list-style-image (specifies an image as the list item marker)</li>
+                         </ul>
+                         <p>If one of the property values above are missing, the default value for the missing property will
+                          be inserted, if any.</p>
+
+                          <h3>Styling List With Colors</h3>
+                          <p>We can also style lists with colors, to make them look a little more interesting.</p>
+                          <p>Anything added to the &#60;ol&#62; or &#60;ul&#62; tag, affects the entire list, while properties added to the
+                           <li> tag will affect the individual list items</p>
                     </article>
                 </section>
-Position The List Item Markers
-The list-style-position property specifies the position of the list-item markers (bullet points).
-"list-style-position: outside;" means that the bullet points will be outside the list item. The start of each line of a list item will be aligned vertically. This is default:
-•	Coffee - A brewed drink prepared from roasted coffee beans...
-•	Tea
-•	Coca-cola
-"list-style-position: inside;" means that the bullet points will be inside the list item. As it is part of the list item, it will be part of the text and push the text at the start:
-•	Coffee - A brewed drink prepared from roasted coffee beans...
-•	Tea
-•	Coca-cola
+
+                <section id="tables">
+                    <article>
+                        <header>
+                            <h2>CSS Tables</h2>
+                        </header>
+                        <p>The look of an HTML table can be greatly improved with CSS</p>
+
+                        <h3>Table Borders</h3>
+                        <p>To specify table borders in CSS, use the border property.</p>
+
+                        <h3>Collapse Table Borders</h3>
+                        <p>The border-collapse property sets whether the table borders should be collapsed into a single border</p>
+
+                        <h3>Table Width and Height</h3>
+                        <p>Width and height of a table are defined by the width and height properties.</p>
+
+                        <h3>Horizontal Alignment</h3>
+                        <p>The text-align property sets the horizontal alignment (like left, right, or center) of the content in <th> or <td>.</p>
+                        <p>By default, the content of <th> elements are center-aligned and the content of <td> elements are left-aligned.</p>
+
+                        <h3>Vertical Alignment</h3>
+                        <p>The vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in <th>
+                         or <td>.</p>
+                         <p>By default, the vertical alignment of the content in a table is middle (for both <th> and <td> elements).</p>
+
+                         <h3>Table Padding</h3>
+                         <p>To control the space between the border and the content in a table, use the padding property on <td> and
+                          <th> elements</p>
+
+                          <h3>Horizontal Dividers</h3>
+                          <p>Add the border-bottom property to <th> and <td> for horizontal dividers</p>
+
+                          <h3>Hoverable Table</h3>
+                          <p>Use the :hover selector on <tr> to highlight table rows on mouse over</p>
+
+                          <h3>Striped Tables</h3>
+                          <p>For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd)
+                           table rows</p>
+
+                           <h3>Responsive Table</h3>
+                          <p>A responsive table will display a horizontal scroll bar if the screen is too small to display the full content</p>
+                          <p>Add a container element (like <div>) with overflow-x:auto around the <table> element to make it responsive</p>
+                          <p>Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though
+                           "overflow:scroll" is set).</p>
+                    </article>
+                </section>
+
+                <section id="layout-display-property">
+                    <article>
+                        <header>
+                          <h2>CSS Layout - The display Property</h2>
+                        </header>
+                        <p>The display property is the most important CSS property for controlling layout</p>
+                        <p>The display property specifies if/how an element is displayed.</p>
+                        <p>Every HTML element has a default display value depending on what type of element it is.</p>
+                        <p>The default display value for most elements is block or inline.</p>
+
+                        <h3>Block-level Elements</h3>
+                        <p>A block-level element always starts on a new line and takes up the full width available
+                         (stretches out to the left and right as far as it can).</p>
+                        <p>The &#60;div&#62; element is a block-level element.</p>
+                        <p>Examples of block-level elements:</p>
+                        <ul>
+                          <li>&#60;div&#62;</li>
+                          <li>&#60;h1&#62; - &#60;h6&#62;</li>
+                          <li>&#60;p&#62;</li>
+                          <li>&#60;form&#62;</li>
+                          <li>&#60;header&#62;</li>
+                          <li>&#60;footer&#62;</li>
+                          <li>&#60;section&#62;</li>
+                        </ul>
+
+                        <h3>CSS Saves a Lot of Work!</h3>
+                        <p>The style definitions are normally saved in external .css files.</p>
+                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
+                        just one file!</p>
+                    </article>
+                </section>
+Inline Elements
+An inline element does not start on a new line and only takes up as much width as necessary.
+This is an inline &#60;span&#62; element inside a paragraph.
+Examples of inline elements:
+•	&#60;span&#62;
+•	&#60;a&#62;
+•	&#60;img&#62;
+Display: none;
+display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them. Take a look at our last example on this page if you want to know how this can be achieved.
+The &#60;script&#62; element uses display: none; as default. 
+Override The Default Display Value
+As mentioned, every element has a default display value. However, you can override this.
+Changing an inline element to a block element, or vice versa, can be useful for making the page look a specific way, and still follow the web standards.
+A common example is making inline &#60;li&#62; elements for horizontal menus:
 Example
-ul.a {
-  list-style-position: outside;
-}
-
-ul.b {
-  list-style-position: inside;
+li {
+  display: inline;
 }
 Try it Yourself »
-Remove Default Settings
-The list-style-type:none property can also be used to remove the markers/bullets. Note that the list also has default margin and padding. To remove this, add margin:0 and padding:0 to <ul> or <ol>:
+Note: Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is. So, an inline element with display: block; is not allowed to have other block elements inside it.
+The following example displays &#60;span&#62; elements as block elements:
 Example
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+span {
+  display: block;
 }
 Try it Yourself »
-List - Shorthand property
-The list-style property is a shorthand property. It is used to set all the list properties in one declaration:
+The following example displays &#60;a&#62; elements as block elements:
 Example
-ul {
-  list-style: square inside url("sqpurple.gif");
+a {
+  display: block;
 }
 Try it Yourself »
-When using the shorthand property, the order of the property values are:
-•	list-style-type (if a list-style-image is specified, the value of this property will be displayed if the image for some reason cannot be displayed)
-•	list-style-position (specifies whether the list-item markers should appear inside or outside the content flow)
-•	list-style-image (specifies an image as the list item marker)
-If one of the property values above are missing, the default value for the missing property will be inserted, if any.
-Styling List With Colors
-We can also style lists with colors, to make them look a little more interesting.
-Anything added to the <ol> or <ul> tag, affects the entire list, while properties added to the <li> tag will affect the individual list items:
-
-
-
-CSS Tables
-The look of an HTML table can be greatly improved with CSS:
-Company	Contact	Country
-Alfreds Futterkiste	Maria Anders	Germany
-Berglunds snabbköp	Christina Berglund	Sweden
-Centro comercial Moctezuma	Francisco Chang	Mexico
-Ernst Handel	Roland Mendel	Austria
-Island Trading	Helen Bennett	UK
-Königlich Essen	Philip Cramer	Germany
-Laughing Bacchus Winecellars	Yoshi Tannamuri	Canada
-Magazzini Alimentari Riuniti	Giovanni Rovelli	Italy
-
+Hide an Element - display:none or visibility:hidden?
+display:none
+ 
+Remove
+visibility:hidden
+ 
+Hide
+Reset
+ 
+Reset All
+Hiding an element can be done by setting the display property to none. The element will be hidden, and the page will be displayed as if the element is not there:
+Example
+h1.hidden {
+  display: none;
+}
 Try it Yourself »
+visibility:hidden; also hides an element.
+However, the element will still take up the same space as before. The element will be hidden, but still affect the layout:
+Example
+h1.hidden {
+  visibility: hidden;
+}
+CSS Layout - width and max-width
+Using width, max-width and margin: auto;
+As mentioned in the previous chapter; a block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+Setting the width of a block-level element will prevent it from stretching out to the edges of its container. Then, you can set the margins to auto, to horizontally center the element within its container. The element will take up the specified width, and the remaining space will be split equally between the two margins:
+This &#60;div&#62; element has a width of 500px, and margin set to auto.
+
+
+Note: The problem with the &#60;div&#62; above occurs when the browser window is smaller than the width of the element. The browser then adds a horizontal scrollbar to the page.
+Using max-width instead, in this situation, will improve the browser's handling of small windows. This is important when making a site usable on small devices:
+This &#60;div&#62; element has a max-width of 500px, and margin set to auto.
+
+
+Tip: Resize the browser window to less than 500px wide, to see the difference between the two divs!
+Here is an example of the two divs above:
+Example
+div.ex1 {
+  width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+
+div.ex2 {
+  max-width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+CSS Layout - The position Property
+The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
 ________________________________________
-Table Borders
-To specify table borders in CSS, use the border property.
-The example below specifies a black border for <table>, <th>, and <td> elements:
+The position Property
+The position property specifies the type of positioning method used for an element.
+There are five different position values:
+•	static
+•	relative
+•	fixed
+•	absolute
+•	sticky
+Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
+position: static;
+HTML elements are positioned static by default.
+Static positioned elements are not affected by the top, bottom, left, and right properties.
+An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
+This <div> element has position: static;
+Here is the CSS that is used:
 Example
-table, th, td {
-  border: 1px solid black;
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
 }
 Try it Yourself »
-Notice that the table in the example above has double borders. This is because both the table and the <th> and <td> elements have separate borders.
-Collapse Table Borders
-The border-collapse property sets whether the table borders should be collapsed into a single border:
+position: relative;
+An element with position: relative; is positioned relative to its normal position.
+Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+This <div> element has position: relative;
+Here is the CSS that is used:
 Example
-table {
-  border-collapse: collapse;
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+Try it Yourself »
+________________________________________position: fixed;
+An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+A fixed element does not leave a gap in the page where it would normally have been located.
+Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used:
+Example
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+Try it Yourself »
+This <div> element has position: fixed;
+position: absolute;
+An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+Note: A "positioned" element is one whose position is anything except static.
+Here is a simple example:
+This <div> element has position: relative;
+This <div> element has position: absolute;
+Here is the CSS that is used:
+Example
+div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
 }
 
-table, th, td {
-  border: 1px solid black;
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
 }
 Try it Yourself »
-If you only want a border around the table, only specify the border property for <table>:
+position: sticky;
+An element with position: sticky; is positioned based on the user's scroll position.
+A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for sticky positioning to work.
+In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.
 Example
-table {
-  border: 1px solid black;
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
 }
 Try it Yourself »
-________________________________________Table Width and Height
-Width and height of a table are defined by the width and height properties.
-The example below sets the width of the table to 100%, and the height of the <th> elements to 50px:
+Overlapping Elements
+When elements are positioned, they can overlap other elements.
+The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).
+An element can have a positive or negative stack order:
+This is a heading
+ 
+Because the image has a z-index of -1, it will be placed behind the text.
 Example
-table {
-  width: 100%;
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
 }
+Try it Yourself »
+An element with greater stack order is always in front of an element with a lower stack order.
+Note: If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.
+Positioning Text In an Image
+How to position text over an image:
+Example
+ 
+Bottom Left
+Top Left
+Top Right
+Bottom Right
+Centered
+Try it Yourself:
+CSS Layout - Overflow
+The CSS overflow property controls what happens to content that is too big to fit into an area.
+This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
 
-th {
-  height: 50px;
-}
 Try it Yourself »
-Horizontal Alignment
-The text-align property sets the horizontal alignment (like left, right, or center) of the content in <th> or <td>.
-By default, the content of <th> elements are center-aligned and the content of <td> elements are left-aligned.
-The following example left-aligns the text in <th> elements:
-Example
-th {
-  text-align: left;
-}
-Try it Yourself »
-Vertical Alignment
-The vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in <th> or <td>.
-By default, the vertical alignment of the content in a table is middle (for both <th> and <td> elements).
-The following example sets the vertical text alignment to bottom for <td> elements:
-Example
-td {
-  height: 50px;
-  vertical-align: bottom;
-}
-Try it Yourself »
-Table Padding
-To control the space between the border and the content in a table, use the padding property on <td> and <th> elements:
-Example
-th, td {
-  padding: 15px;
-  text-align: left;
-}
-Try it Yourself »
-________________________________________
-Horizontal Dividers
-First Name	Last Name	Savings
-Peter	Griffin	$100
-Lois	Griffin	$150
-Joe	Swanson	$300
-Add the border-bottom property to <th> and <td> for horizontal dividers:
-Example
-th, td {
-  border-bottom: 1px solid #ddd;
-}
-Try it Yourself »
-________________________________________
-Hoverable Table
-Use the :hover selector on <tr> to highlight table rows on mouse over:
-First Name	Last Name	Savings
-Peter	Griffin	$100
-Lois	Griffin	$150
-Joe	Swanson	$300
-Example
-tr:hover {background-color: #f5f5f5;}
-Try it Yourself »
-________________________________________
-Striped Tables
-First Name	Last Name	Savings
-Peter	Griffin	$100
-Lois	Griffin	$150
-Joe	Swanson	$300
-For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
-Example
-tr:nth-child(even) {background-color: #f2f2f2;}
-Try it Yourself »
-Table Color
-The example below specifies the background color and text color of <th> elements:
-First Name	Last Name	Savings
-Peter	Griffin	$100
-Lois	Griffin	$150
-Joe	Swanson	$300
-Example
-th {
-  background-color: #4CAF50;
-  color: white;
-}
-Try it Yourself »
-Responsive Table
-A responsive table will display a horizontal scroll bar if the screen is too small to display the full content:
-First Name	Last Name	Points	Points	Points	Points	Points	Points	Points	Points	Points	Points	Points	Points
-Jill	Smith	50	50	50	50	50	50	50	50	50	50	50	50
-Eve	Jackson	94	94	94	94	94	94	94	94	94	94	94	94
-Adam	Johnson	67	67	67	67	67	67	67	67	67	67	67	67
-Add a container element (like <div>) with overflow-x:auto around the <table> element to make it responsive:
-Example
-<div style="overflow-x:auto;">
-
-<table>
-... table content ...
-</table>
-
-</div>
-Try it Yourself »
+CSS Overflow
+The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+The overflow property has the following values:
+•	visible - Default. The overflow is not clipped. The content renders outside the element's box
+•	hidden - The overflow is clipped, and the rest of the content will be invisible
+•	scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+•	auto - Similar to scroll, but it adds scrollbars only when necessary
+Note: The overflow property only works for block elements with a specified height.
 Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).
+overflow: visible
+By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  width: 200px;
+  height: 50px;
+  background-color: #eee;
+  overflow: visible;
+}
+Try it Yourself »
+overflow: hidden
+With the hidden value, the overflow is clipped, and the rest of the content is hidden:
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  overflow: hidden;
+}
+Try it Yourself »
+overflow: scroll
+Setting the value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  overflow: scroll;
+}
+Try it Yourself »
+overflow: auto
+The auto value is similar to scroll, but it adds scrollbars only when necessary:
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  overflow: auto;
+}
+Try it Yourself »
+________________________________________
+overflow-x and overflow-y
+The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both):
+overflow-x specifies what to do with the left/right edges of the content.
+overflow-y specifies what to do with the top/bottom edges of the content.
+You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+Example
+div {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: scroll; /* Add vertical scrollbar */
+}
 
 <section id="introduction">
                     <article>
@@ -1293,46 +1475,6 @@ Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown whe
                         <p>With an external stylesheet file, you can change the look of an entire website by changing 
                         just one file!</p>
                     </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
 
 
 
@@ -1341,279 +1483,6 @@ Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown whe
 
 
 
-CSS Layout - The display Property
-The display property is the most important CSS property for controlling layout
-The display Property
-The display property specifies if/how an element is displayed.
-Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.
-Click to show panel
-Block-level Elements
-A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
-The <div> element is a block-level element.
-Examples of block-level elements:
-•	<div>
-•	<h1> - <h6>
-•	<p>
-•	<form>
-•	<header>
-•	<footer>
-•	<section>
-Inline Elements
-An inline element does not start on a new line and only takes up as much width as necessary.
-This is an inline <span> element inside a paragraph.
-Examples of inline elements:
-•	<span>
-•	<a>
-•	<img>
-Display: none;
-display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them. Take a look at our last example on this page if you want to know how this can be achieved.
-The <script> element uses display: none; as default. 
-Override The Default Display Value
-As mentioned, every element has a default display value. However, you can override this.
-Changing an inline element to a block element, or vice versa, can be useful for making the page look a specific way, and still follow the web standards.
-A common example is making inline <li> elements for horizontal menus:
-Example
-li {
-  display: inline;
-}
-Try it Yourself »
-Note: Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is. So, an inline element with display: block; is not allowed to have other block elements inside it.
-The following example displays <span> elements as block elements:
-Example
-span {
-  display: block;
-}
-Try it Yourself »
-The following example displays <a> elements as block elements:
-Example
-a {
-  display: block;
-}
-Try it Yourself »
-Hide an Element - display:none or visibility:hidden?
-display:none
- 
-Remove
-visibility:hidden
- 
-Hide
-Reset
- 
-Reset All
-Hiding an element can be done by setting the display property to none. The element will be hidden, and the page will be displayed as if the element is not there:
-Example
-h1.hidden {
-  display: none;
-}
-Try it Yourself »
-visibility:hidden; also hides an element.
-However, the element will still take up the same space as before. The element will be hidden, but still affect the layout:
-Example
-h1.hidden {
-  visibility: hidden;
-}
-CSS Layout - width and max-width
-Using width, max-width and margin: auto;
-As mentioned in the previous chapter; a block-level element always takes up the full width available (stretches out to the left and right as far as it can).
-Setting the width of a block-level element will prevent it from stretching out to the edges of its container. Then, you can set the margins to auto, to horizontally center the element within its container. The element will take up the specified width, and the remaining space will be split equally between the two margins:
-This <div> element has a width of 500px, and margin set to auto.
-
-
-Note: The problem with the <div> above occurs when the browser window is smaller than the width of the element. The browser then adds a horizontal scrollbar to the page.
-Using max-width instead, in this situation, will improve the browser's handling of small windows. This is important when making a site usable on small devices:
-This <div> element has a max-width of 500px, and margin set to auto.
-
-
-Tip: Resize the browser window to less than 500px wide, to see the difference between the two divs!
-Here is an example of the two divs above:
-Example
-div.ex1 {
-  width: 500px;
-  margin: auto;
-  border: 3px solid #73AD21;
-}
-
-div.ex2 {
-  max-width: 500px;
-  margin: auto;
-  border: 3px solid #73AD21;
-}
-CSS Layout - The position Property
-The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
-________________________________________
-The position Property
-The position property specifies the type of positioning method used for an element.
-There are five different position values:
-•	static
-•	relative
-•	fixed
-•	absolute
-•	sticky
-Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
-position: static;
-HTML elements are positioned static by default.
-Static positioned elements are not affected by the top, bottom, left, and right properties.
-An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
-This <div> element has position: static;
-Here is the CSS that is used:
-Example
-div.static {
-  position: static;
-  border: 3px solid #73AD21;
-}
-Try it Yourself »
-position: relative;
-An element with position: relative; is positioned relative to its normal position.
-Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
-This <div> element has position: relative;
-Here is the CSS that is used:
-Example
-div.relative {
-  position: relative;
-  left: 30px;
-  border: 3px solid #73AD21;
-}
-Try it Yourself »
-________________________________________position: fixed;
-An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
-A fixed element does not leave a gap in the page where it would normally have been located.
-Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used:
-Example
-div.fixed {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 300px;
-  border: 3px solid #73AD21;
-}
-Try it Yourself »
-This <div> element has position: fixed;
-position: absolute;
-An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
-However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
-Note: A "positioned" element is one whose position is anything except static.
-Here is a simple example:
-This <div> element has position: relative;
-This <div> element has position: absolute;
-Here is the CSS that is used:
-Example
-div.relative {
-  position: relative;
-  width: 400px;
-  height: 200px;
-  border: 3px solid #73AD21;
-}
-
-div.absolute {
-  position: absolute;
-  top: 80px;
-  right: 0;
-  width: 200px;
-  height: 100px;
-  border: 3px solid #73AD21;
-}
-Try it Yourself »
-position: sticky;
-An element with position: sticky; is positioned based on the user's scroll position.
-A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
-Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for sticky positioning to work.
-In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.
-Example
-div.sticky {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  background-color: green;
-  border: 2px solid #4CAF50;
-}
-Try it Yourself »
-Overlapping Elements
-When elements are positioned, they can overlap other elements.
-The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).
-An element can have a positive or negative stack order:
-This is a heading
- 
-Because the image has a z-index of -1, it will be placed behind the text.
-Example
-img {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
-}
-Try it Yourself »
-An element with greater stack order is always in front of an element with a lower stack order.
-Note: If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.
-Positioning Text In an Image
-How to position text over an image:
-Example
- 
-Bottom Left
-Top Left
-Top Right
-Bottom Right
-Centered
-Try it Yourself:
-CSS Layout - Overflow
-The CSS overflow property controls what happens to content that is too big to fit into an area.
-This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
-
-Try it Yourself »
-CSS Overflow
-The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
-The overflow property has the following values:
-•	visible - Default. The overflow is not clipped. The content renders outside the element's box
-•	hidden - The overflow is clipped, and the rest of the content will be invisible
-•	scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
-•	auto - Similar to scroll, but it adds scrollbars only when necessary
-Note: The overflow property only works for block elements with a specified height.
-Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).
-overflow: visible
-By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:
-You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
-Example
-div {
-  width: 200px;
-  height: 50px;
-  background-color: #eee;
-  overflow: visible;
-}
-Try it Yourself »
-overflow: hidden
-With the hidden value, the overflow is clipped, and the rest of the content is hidden:
-You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
-Example
-div {
-  overflow: hidden;
-}
-Try it Yourself »
-overflow: scroll
-Setting the value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):
-You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
-Example
-div {
-  overflow: scroll;
-}
-Try it Yourself »
-overflow: auto
-The auto value is similar to scroll, but it adds scrollbars only when necessary:
-You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
-Example
-div {
-  overflow: auto;
-}
-Try it Yourself »
-________________________________________
-overflow-x and overflow-y
-The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both):
-overflow-x specifies what to do with the left/right edges of the content.
-overflow-y specifies what to do with the top/bottom edges of the content.
-You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
-Example
-div {
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  overflow-y: scroll; /* Add vertical scrollbar */
-}
 CSS Layout - float and clear
 The CSS float property specifies how an element should float.
 The CSS clear property specifies what elements can float beside the cleared element and on which side
