@@ -47,7 +47,7 @@
                     <li><a href="#tables">Tables</a></li>
                     <li><a href="#layout-display-property">Layout - The display Property</a></li>
                     <li><a href="#layout-width-max-width">Layout - width and max-width</a></li>
-                    <li><a href="#layout-position-Property">Layout - The position Property</a></li>
+                    <li><a href="#layout-position-property">Layout - The position Property</a></li>
                     <li><a href="#layout-overflow">Layout - Overflow</a></li>
                     <li><a href="#layout-float-clear">Layout - float and clear</a></li>
                     <li><a href="#layout-display-inline-block">Layout - display: inline-block</a></li>
@@ -55,17 +55,6 @@
                     <li><a href="#combinators">Combinators</a></li>
                     <li><a href="#pseudo-classes">Pseudo-classes</a></li>
                     <li><a href="#pseudo-elements">Pseudo-elements</a></li>
-                    <li><a href="#opacity-transparency">Opacity / Transparency</a></li>
-                    <li><a href="#navigation-bar">Navigation Bar</a></li>
-                    <li><a href="#dropdowns">Dropdowns</a></li>
-                    <li><a href="#image-gallery">Image Gallery</a></li>
-                    <li><a href="#image-sprites">Image Sprites</a></li>
-                    <li><a href="#attribute-selectors">Attribute Selectors</a></li>
-                    <li><a href="#forms">Forms</a></li>
-                    <li><a href="#counters">Counters</a></li>
-                    <li><a href="#website-layout">Website Layout</a></li>
-                    <li><a href="#units">Units</a></li>
-                    <li><a href="#specificity">Specificity</a></li>
                 </ul>
             </nav>
 
@@ -816,2261 +805,378 @@
                         <p>The style definitions are normally saved in external .css files.</p>
                         <p>With an external stylesheet file, you can change the look of an entire website by changing 
                         just one file!</p>
+
+                        <h3>Inline Elements</h3>
+                        <p>An inline element does not start on a new line and only takes up as much width as necessary.</p>
+                        <p>This is an inline &#60;span&#62; element inside a paragraph.</p>
+                        <p>Examples of inline elements:</p>
+                        <ul>
+                          <li>&#60;span&#62;</li>
+                          <li>&#60;a&#62;</li>
+                          <li>&#60;img&#62;</li>
+                        </ul>
+
+                        <h3>Display: none;</h3>
+                        <p>display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them.</p>
+                        <p>The &#60;script&#62; element uses display: none; as default.</p>
+
+                        <h3>Override The Default Display Value</h3>
+                        <p>As mentioned, every element has a default display value. However, you can override this.</p>
+                        <p>Changing an inline element to a block element, or vice versa, can be useful for making the page look a specific
+                         way, and still follow the web standards.</p>
+                        <p>A common example is making inline &#60;li&#62; elements for horizontal menus</p>
+                        <p><b>Note:</b> Setting the display property of an element only changes how the element is displayed, NOT what kind
+                         of element it is. So, an inline element with display: block; is not allowed to have other block elements inside it.</p>
                     </article>
                 </section>
-Inline Elements
-An inline element does not start on a new line and only takes up as much width as necessary.
-This is an inline &#60;span&#62; element inside a paragraph.
-Examples of inline elements:
-•	&#60;span&#62;
-•	&#60;a&#62;
-•	&#60;img&#62;
-Display: none;
-display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them. Take a look at our last example on this page if you want to know how this can be achieved.
-The &#60;script&#62; element uses display: none; as default. 
-Override The Default Display Value
-As mentioned, every element has a default display value. However, you can override this.
-Changing an inline element to a block element, or vice versa, can be useful for making the page look a specific way, and still follow the web standards.
-A common example is making inline &#60;li&#62; elements for horizontal menus:
-Example
-li {
-  display: inline;
-}
-Try it Yourself »
-Note: Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is. So, an inline element with display: block; is not allowed to have other block elements inside it.
-The following example displays &#60;span&#62; elements as block elements:
-Example
-span {
-  display: block;
-}
-Try it Yourself »
-The following example displays &#60;a&#62; elements as block elements:
-Example
-a {
-  display: block;
-}
-Try it Yourself »
-Hide an Element - display:none or visibility:hidden?
-display:none
- 
-Remove
-visibility:hidden
- 
-Hide
-Reset
- 
-Reset All
-Hiding an element can be done by setting the display property to none. The element will be hidden, and the page will be displayed as if the element is not there:
-Example
-h1.hidden {
-  display: none;
-}
-Try it Yourself »
-visibility:hidden; also hides an element.
-However, the element will still take up the same space as before. The element will be hidden, but still affect the layout:
-Example
-h1.hidden {
-  visibility: hidden;
-}
-CSS Layout - width and max-width
-Using width, max-width and margin: auto;
-As mentioned in the previous chapter; a block-level element always takes up the full width available (stretches out to the left and right as far as it can).
-Setting the width of a block-level element will prevent it from stretching out to the edges of its container. Then, you can set the margins to auto, to horizontally center the element within its container. The element will take up the specified width, and the remaining space will be split equally between the two margins:
-This &#60;div&#62; element has a width of 500px, and margin set to auto.
 
-
-Note: The problem with the &#60;div&#62; above occurs when the browser window is smaller than the width of the element. The browser then adds a horizontal scrollbar to the page.
-Using max-width instead, in this situation, will improve the browser's handling of small windows. This is important when making a site usable on small devices:
-This &#60;div&#62; element has a max-width of 500px, and margin set to auto.
-
-
-Tip: Resize the browser window to less than 500px wide, to see the difference between the two divs!
-Here is an example of the two divs above:
-Example
-div.ex1 {
-  width: 500px;
-  margin: auto;
-  border: 3px solid #73AD21;
-}
-
-div.ex2 {
-  max-width: 500px;
-  margin: auto;
-  border: 3px solid #73AD21;
-}
-CSS Layout - The position Property
-The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
-________________________________________
-The position Property
-The position property specifies the type of positioning method used for an element.
-There are five different position values:
-•	static
-•	relative
-•	fixed
-•	absolute
-•	sticky
-Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
-position: static;
-HTML elements are positioned static by default.
-Static positioned elements are not affected by the top, bottom, left, and right properties.
-An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
-This <div> element has position: static;
-Here is the CSS that is used:
-Example
-div.static {
-  position: static;
-  border: 3px solid #73AD21;
-}
-Try it Yourself »
-position: relative;
-An element with position: relative; is positioned relative to its normal position.
-Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
-This <div> element has position: relative;
-Here is the CSS that is used:
-Example
-div.relative {
-  position: relative;
-  left: 30px;
-  border: 3px solid #73AD21;
-}
-Try it Yourself »
-________________________________________position: fixed;
-An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
-A fixed element does not leave a gap in the page where it would normally have been located.
-Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used:
-Example
-div.fixed {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 300px;
-  border: 3px solid #73AD21;
-}
-Try it Yourself »
-This <div> element has position: fixed;
-position: absolute;
-An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
-However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
-Note: A "positioned" element is one whose position is anything except static.
-Here is a simple example:
-This <div> element has position: relative;
-This <div> element has position: absolute;
-Here is the CSS that is used:
-Example
-div.relative {
-  position: relative;
-  width: 400px;
-  height: 200px;
-  border: 3px solid #73AD21;
-}
-
-div.absolute {
-  position: absolute;
-  top: 80px;
-  right: 0;
-  width: 200px;
-  height: 100px;
-  border: 3px solid #73AD21;
-}
-Try it Yourself »
-position: sticky;
-An element with position: sticky; is positioned based on the user's scroll position.
-A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
-Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for sticky positioning to work.
-In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.
-Example
-div.sticky {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  background-color: green;
-  border: 2px solid #4CAF50;
-}
-Try it Yourself »
-Overlapping Elements
-When elements are positioned, they can overlap other elements.
-The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).
-An element can have a positive or negative stack order:
-This is a heading
- 
-Because the image has a z-index of -1, it will be placed behind the text.
-Example
-img {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
-}
-Try it Yourself »
-An element with greater stack order is always in front of an element with a lower stack order.
-Note: If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.
-Positioning Text In an Image
-How to position text over an image:
-Example
- 
-Bottom Left
-Top Left
-Top Right
-Bottom Right
-Centered
-Try it Yourself:
-CSS Layout - Overflow
-The CSS overflow property controls what happens to content that is too big to fit into an area.
-This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
-
-Try it Yourself »
-CSS Overflow
-The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
-The overflow property has the following values:
-•	visible - Default. The overflow is not clipped. The content renders outside the element's box
-•	hidden - The overflow is clipped, and the rest of the content will be invisible
-•	scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
-•	auto - Similar to scroll, but it adds scrollbars only when necessary
-Note: The overflow property only works for block elements with a specified height.
-Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).
-overflow: visible
-By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:
-You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
-Example
-div {
-  width: 200px;
-  height: 50px;
-  background-color: #eee;
-  overflow: visible;
-}
-Try it Yourself »
-overflow: hidden
-With the hidden value, the overflow is clipped, and the rest of the content is hidden:
-You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
-Example
-div {
-  overflow: hidden;
-}
-Try it Yourself »
-overflow: scroll
-Setting the value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):
-You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
-Example
-div {
-  overflow: scroll;
-}
-Try it Yourself »
-overflow: auto
-The auto value is similar to scroll, but it adds scrollbars only when necessary:
-You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
-Example
-div {
-  overflow: auto;
-}
-Try it Yourself »
-________________________________________
-overflow-x and overflow-y
-The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both):
-overflow-x specifies what to do with the left/right edges of the content.
-overflow-y specifies what to do with the top/bottom edges of the content.
-You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
-Example
-div {
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  overflow-y: scroll; /* Add vertical scrollbar */
-}
-
-<section id="introduction">
+                <section id="layout-width-max-width">
                     <article>
                         <header>
-                            <h2>CSS Introduction</h2>
+                            <h2>CSS Layout - width and max-width</h2>
+                        </header>
+                        <h3>Using width, max-width and margin: auto;</h3>
+                        <p>As mentioned in the previous chapter; a block-level element always takes up the full width available
+                         (stretches out to the left and right as far as it can).</p>
+                        <p>Setting the width of a block-level element will prevent it from stretching out to the edges of its container.</p>
+                        <p>Then, you can set the margins to auto, to horizontally center the element within its container</p>
+                        <p>The element will take up the specified width, and the remaining space will be split equally between the two
+                         margins</p>
+                        <p>This &#60;div&#62; element has a width of 500px, and margin set to auto.</p>
+                        <p><b>Note:</b> The problem with the &#60;div&#62; above occurs when the browser window is smaller than the width
+                         of the element.</p>
+                        <p>The browser then adds a horizontal scrollbar to the page.</p>
+                        <p>Using max-width instead, in this situation, will improve the browser's handling of small windows.</p>
+                        <p>This is important when making a site usable on small devices</p>
+                        <p>This &#60;div&#62; element has a max-width of 500px, and margin set to auto.</p>
+                    </article>
+                </section>
+
+                <section id="layout-position-property">
+                    <article>
+                        <header>
+                            <h2>CSS Layout - The position Property</h2>
+                        </header>
+                        <p>The position property specifies the type of positioning method used for an element (static,
+                         relative, fixed, absolute or sticky).</p>
+                        <p>The position property specifies the type of positioning method used for an element.</p>
+
+                        <h3>Five Different Position Values</h3>
+                        <ul>
+                          <li>static</li>
+                          <li>relative</li>
+                          <li>fixed</li>
+                          <li>absolute</li>
+                          <li>sticky</li>
+                        </ul>
+                        <p>Elements are then positioned using the top, bottom, left, and right properties.</p>
+                        <p>However, these properties will not work unless the position property is set first.</p>
+                        <p>They also work differently depending on the position value.</p>
+
+                        <h3>position: static;</h3>
+                        <p>HTML elements are positioned static by default.</p>
+                        <p>Static positioned elements are not affected by the top, bottom, left, and right properties.</p>
+                        <p>An element with position: static; is not positioned in any special way; it is always positioned
+                         according to the normal flow of the page</p>
+
+                        <h3>position: relative;</h3>
+                        <p>An element with position: relative; is positioned relative to its normal position.</p>
+                        <p>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause
+                         it to be adjusted away from its normal position. Other content will not be adjusted to fit into any
+                         gap left by the element.</p>
+
+                        <h3>position: fixed;</h3>
+                        <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays
+                         in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to
+                         position the element.</p>
+                        <p>A fixed element does not leave a gap in the page where it would normally have been located.</p>
+
+                        <h3>position: absolute;</h3>
+                        <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead
+                         of positioned relative to the viewport, like fixed).</p>
+                        <p>However; if an absolute positioned element has no positioned ancestors, it uses the document body, and
+                         moves along with page scrolling.</p>
+                        <p><b>Note:</b> A "positioned" element is one whose position is anything except static.</p>
+
+                        <h3>position: sticky;</h3>
+                        <p>An element with position: sticky; is positioned based on the user's scroll position.</p>
+                        <p>A sticky element toggles between relative and fixed, depending on the scroll position.</p>
+                        <p>It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place
+                         (like position:fixed).</p>
+                        <p><b>Note:</b> Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires
+                         a -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for sticky
+                          positioning to work.</p>
+
+                        <h3>Overlapping Elements</h3>
+                        <p>When elements are positioned, they can overlap other elements.</p>
+                        <p>The z-index property specifies the stack order of an element (which element should be placed in front of, or
+                         behind, the others).</p>
+                        <p>An element can have a positive or negative stack order:</p>
+                        <p>An element with greater stack order is always in front of an element with a lower stack order.</p>
+                        <p><b>Note:</b> If two positioned elements overlap without a z-index specified, the element positioned last in the
+                         HTML code will be shown on top.</p>
+                    </article>
+                </section>
+
+                <section id="layout-overflow">
+                    <article>
+                        <header>
+                            <h2>CSS Layout - Overflow</h2>
                         </header>
                         <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
+                        <p>The CSS overflow property controls what happens to content that is too big to fit into an area.</p>
+                        <p>The overflow property specifies whether to clip the content or to add scrollbars when the content
+                         of an element is too big to fit in the specified area.</p>
 
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
+                        <h3>Overflow Property Values</h3>
+                        <ul>
+                          <li>visible - Default. The overflow is not clipped. The content renders outside the element's box</li>
+                          <li>hidden - The overflow is clipped, and the rest of the content will be invisible</li>
+                          <li>scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content</li>
+                          <li>auto - Similar to scroll, but it adds scrollbars only when necessary</li>
+                        </ul>
+                        <p><b>Note:</b> The overflow property only works for block elements with a specified height.</p>
+                        <p><b>Note:</b> In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used
+                         (even though "overflow:scroll" is set).</p>
 
                         <h3>CSS Saves a Lot of Work!</h3>
                         <p>The style definitions are normally saved in external .css files.</p>
                         <p>With an external stylesheet file, you can change the look of an entire website by changing 
                         just one file!</p>
+
+                        <h3>overflow: visible</h3>
+                        <p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box</p>
+                        <p>You can use the overflow property when you want to have better control of the layout. The overflow property
+                         specifies what happens if content overflows an element's box.</p>
+
+                        <h3>overflow: hidden</h3>
+                        <p>With the hidden value, the overflow is clipped, and the rest of the content is hidden</p>
+                        <p>You can use the overflow property when you want to have better control of the layout. The overflow property
+                         specifies what happens if content overflows an element's box.</p>
+
+                        <h3>overflow: scroll</h3>
+                        <p>Setting the value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box.</p>
+                        <p>Note that this will add a scrollbar both horizontally and vertically (even if you do not need it)</p>
+                        <p>You can use the overflow property when you want to have better control of the layout.</p>
+                        <p>The overflow property specifies what happens if content overflows an element's box.</p>
+
+                        <h3>overflow: auto</h3>
+                        <p>The auto value is similar to scroll, but it adds scrollbars only when necessary</p>
+                        <p>You can use the overflow property when you want to have better control of the layout.</p>
+                        <p>The overflow property specifies what happens if content overflows an element's box.</p>
+
+                        <h3>overflow-x and overflow-y</h3>
+                        <p>The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally
+                         or vertically (or both)</p>
+                        <p>overflow-x specifies what to do with the left/right edges of the content.</p>
+                        <p>overflow-y specifies what to do with the top/bottom edges of the content.</p>
+                        <p>You can use the overflow property when you want to have better control of the layout.</p>
+                        <p>The overflow property specifies what happens if content overflows an element's box.</p>
                     </article>
-                </section><section id="introduction">
+                </section>
+
+                <section id="layout-float-clear">
                     <article>
                         <header>
-                            <h2>CSS Introduction</h2>
+                            <h2>CSS Layout - float and clear</h2>
                         </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
+                        <p>The CSS float property specifies how an element should float.</p>
+                        <p>The CSS clear property specifies what elements can float beside the cleared element and on which side</p>
 
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
+                        <h3>The float Property</h3>
+                        <p>The float property is used for positioning and formatting content e.g. let an image float left to the text
+                         in a container.</p>
+
+                        <h3>Float Property Values</h3>
+                        <ul>
+                          <li>left - The element floats to the left of its container</li>
+                          <li>right - The element floats to the right of its container</li>
+                          <li>none - The element does not float (will be displayed just where it occurs in the text) which is default</li>
+                          <li>inherit - The element inherits the float value of its parent</li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="layout-display-inline-block">
+                    <article>
+                        <header>
+                            <h2>CSS Layout - display: inline-block</h2>
+                        </header>
+                        <p>Compared to display: inline, the major difference is that display: inline-block allows to set a width
+                         and height on the element.</p>
+                        <p>Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display:
+                         inline they are not.</p>
+                        <p>Compared to display: block, the major difference is that display: inline-block does not add a line-break
+                         after the element, so the element can sit next to other elements.</p>
+
+                        <h3>Using inline-block to Create Navigation Links</h3>
+                        <p>One common use for display: inline-block is to display list items horizontally instead of vertically.</p>
+                    </article>
+                </section>
+
+                <section id="layout-horizontal-vertical-align">
+                    <article>
+                        <header>
+                            <h2>CSS Layout - Horizontal &#38; Vertical Align</h2>
+                        </header>
+                        <h3>Center Align Elements</h3>
+                        <p>To horizontally center a block element (like &#60;div&#62;), use margin: auto;</p>
+                        <p>Setting the width of the element will prevent it from stretching out to the edges of its container.</p>
+                        <p>The element will then take up the specified width, and the remaining space will be split equally
+                         between the two margins</p>
+                        <p><b>Note:</b> Center aligning has no effect if the width property is not set (or set to 100%).</p>
+                        <p>To just center the text inside an element, use text-align: center;</p>
+                        <p><b>Tip:</b> For more examples on how to align text, see the CSS Text chapter.</p>
+
+                        <h3>Center an Image</h3>
+                        <p>To center an image, set left and right margin to auto and make it into a block element</p>
+
+                        <h3>Left and Right Align - Using position</h3>
+                        <p>One method for aligning elements is to use position: absolute;</p>
+                        <p><b>Note:</b> Absolute positioned elements are removed from the normal flow, and can overlap elements.</p>
+
+                        <h3>Left and Right Align - Using float</h3>
+                        <p>Another method for aligning elements is to use the float property</p>
+                        <p><b>Note:</b> If an element is taller than the element containing it, and it is floated, it will overflow outside of its container.</p>
+                        <p>You can use the "clearfix" hack to fix this (see example below).</p>
+
+                        <h3>Center Vertically - Using padding</h3>
+                        <p>There are many ways to center an element vertically in CSS.</p>
+                        <p>A simple solution is to use top and bottom padding</p>
+
+                        <h3>Center Vertically - Using line-height</h3>
+                        <p>Another trick is to use the line-height property with a value that is equal to the height property</p>
+
+                        <h3>Center Vertically - Using position &#38; transform</h3>
+                        <p>If padding and line-height are not options, another solution is to use positioning and the transform property</p>
+
+                        <h3>Center Vertically - Using Flexbox</h3>
+                        <p>You can also use flexbox to center things.</p>
+                        <p>Just note that flexbox is not supported in IE10 and earlier versions</p>
+                    </article>
+                </section>
+
+                <section id="combinators">
+                    <article>
+                        <header>
+                            <h2>CSS Combinators</h2>
+                        </header>
+                        <p>A combinator is something that explains the relationship between the selectors.</p>
+                        <p>A CSS selector can contain more than one simple selector.</p>
+                        <p>Between the simple selectors, we can include a combinator.</p>
+                        <p>There are four different combinators in CSS:</p>
+                        <ol>
+                          <li>descendant selector (space)</li>
+                          <li>child selector (>)</li>
+                          <li>adjacent sibling selector (+)</li>
+                          <li>general sibling selector (~)</li>
+                        </ol>
+
+                        <h3>Descendant Selector</h3>
+                        <p>The descendant selector matches all elements that are descendants of a specified element.</p>
+
+                        <h3>Child Selector</h3>
+                        <p>The child selector selects all elements that are the children of a specified element.</p>
+
+                        <h3>Adjacent Sibling Selector</h3>
+                        <p>The adjacent sibling selector selects all elements that are the adjacent siblings of a specified element.</p>
+                        <p>Sibling elements must have the same parent element, and "adjacent" means "immediately following".</p>
+
+                        <h3>General Sibling Selector</h3>
+                        <p>The general sibling selector selects all elements that are siblings of a specified element.</p>
+                    </article>
+                </section>
+
+                <section id="pseudo-classes">
+                    <article>
+                        <header>
+                            <h2>CSS Pseudo-classes</h2>
+                        </header>
+                        <h3>What are Pseudo-classes?</h3>
+                        <p>A pseudo-class is used to define a special state of an element.</p>
+                        <p>For example, it can be used to:</p>
+                        <ul>
+                          <li>Style an element when a user mouses over it</li>
+                          <li>Style visited and unvisited links differently</li>
+                          <li>Style an element when it gets focus</li>
+                        </ul>
+                        <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective!
+                         a:active MUST come after a:hover in the CSS definition in order to be effective! Pseudo-class names are not
+                          case-sensitive.</p>
+
+                        <h3>Pseudo-classes and CSS Classes</h3>
+                        <p>Pseudo-classes can be combined with CSS classes</p>
 
                         <h3>CSS Saves a Lot of Work!</h3>
                         <p>The style definitions are normally saved in external .css files.</p>
                         <p>With an external stylesheet file, you can change the look of an entire website by changing 
                         just one file!</p>
+
+                        <h3>Simple Tooltip Hover</h3>
+                        <p>Hover over a &#60;div&#62; element to show a &#60;p&#62; element (like a tooltip)</p>
+
+                        <h3>CSS - The :first-child Pseudo-class</h3>
+                        <p>The :first-child pseudo-class matches a specified element that is the first child of another element.</p>
+
+                        <h3>CSS - The :lang Pseudo-class</h3>
+                        <p>The :lang pseudo-class allows you to define special rules for different languages.</p>
                     </article>
-                </section><section id="introduction">
+                </section>
+
+                <section id="pseudo-elements">
                     <article>
                         <header>
-                            <h2>CSS Introduction</h2>
+                            <h2>CSS Pseudo-elements</h2>
                         </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
+                        <h3>What are Pseudo-Elements?</h3>
+                        <p>A CSS pseudo-element is used to style specified parts of an element.</p>
+                        <p>For example, it can be used to:</p>
+                        <ul>
+                          <li>Style the first letter, or line, of an element</li>
+                          <li>Insert content before, or after, the content of an element</li>
+                        </ul>
 
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
+                        <h3>The ::first-line Pseudo-element</h3>
+                        <p>The ::first-line pseudo-element is used to add a special style to the first line of a text.</p>
+                        <p><b>Note:</b> The ::first-line pseudo-element can only be applied to block-level elements.</p>
 
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
+                        <h3>::first-line pseudo-element Properties</h3>
+                        <ul>
+                          <li>font properties</li>
+                          <li>color properties</li>
+                          <li>background properties</li>
+                          <li>word-spacing</li>
+                          <li>letter-spacing</li>
+                          <li>text-decoration</li>
+                          <li>vertical-align</li>
+                          <li>text-transform</li>
+                          <li>line-height</li>
+                          <li>clear</li>
+                        </ul>
+                        <p>Notice the double colon notation - ::first-line versus :first-line</p>
+                        <p>The double colon replaced the single-colon notation for pseudo-elements in CSS3.</p>
+                        <p>This was an attempt from W3C to distinguish between pseudo-classes and pseudo-elements.</p>
+                        <p>The single-colon syntax was used for both pseudo-classes and pseudo-elements in CSS2 and CSS1.</p>
+                        <p>For backward compatibility, the single-colon syntax is acceptable for CSS2 and CSS1 pseudo-elements.</p>
+
+                        <h3>The ::first-letter Pseudo-element</h3>
+                        <p>The ::first-letter pseudo-element is used to add a special style to the first letter of a text.</p>
+                        <p><b>Note:</b> The ::first-letter pseudo-element can only be applied to block-level elements.</p>
+
+                        <h3>::first-letter pseudo- element Properties</h3>
+                        <ul>
+                          <li>font properties</li>
+                          <li>color properties</li> 
+                          <li>background properties</li>
+                          <li>margin properties</li>
+                          <li>padding properties</li>
+                          <li>border properties</li>
+                          <li>text-decoration</li>
+                          <li>vertical-align (only if "float" is "none")</li>
+                          <li>text-transform</li>
+                          <li>line-height</li>
+                          <li>float</li>
+                          <li>clear</li>
+                        </ul>
                     </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-                </section><section id="introduction">
-                    <article>
-                        <header>
-                            <h2>CSS Introduction</h2>
-                        </header>
-                        <h3>What is CSS?</h3>
-                        <p>CSS stands for Cascading Style Sheets</p>
-                        <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-                        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once</p>
-                        <p>External stylesheets are stored in CSS files</p>
-
-                        <h3>Why Use CSS</h3>
-                        <p>CSS is used to define styles for your web pages, including the design, layout and variations 
-                        in display for different devices and screen sizes.</p>
-
-                        <h3>CSS Saves a Lot of Work!</h3>
-                        <p>The style definitions are normally saved in external .css files.</p>
-                        <p>With an external stylesheet file, you can change the look of an entire website by changing 
-                        just one file!</p>
-                    </article>
-
-
-
-
-
-
-
-
-CSS Layout - float and clear
-The CSS float property specifies how an element should float.
-The CSS clear property specifies what elements can float beside the cleared element and on which side
-The float Property
-The float property is used for positioning and formatting content e.g. let an image float left to the text in a container.
-The float property can have one of the following values:
-•	left - The element floats to the left of its container
-•	right - The element floats to the right of its container
-•	none - The element does not float (will be displayed just where it occurs in the text). This is default
-•	inherit - The element inherits the float value of its parent
-In its simplest use, the float property can be used to wrap text around images.
-Example - float: right;
-The following example specifies that an image should float to the right in a text:
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
-Example
-img {
-  float: right;
-}
-Try it Yourself »
-Example - float: left;
-The following example specifies that an image should float to the left in a text:
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
-Example
-img {
-  float: left;
-}
-Try it Yourself »
-Example - No float
-In the following example the image will be displayed just where it occurs in the text (float: none;):
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
-Example
-img {
-  float: none;
-}
-CSS Layout - display: inline-block
-________________________________________
-The display: inline-block Value
-Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
-Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
-Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.
-The following example shows the different behavior of display: inline, display: inline-block and display: block:
-Example
-span.a {
-  display: inline; /* the default for span */
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 1px solid blue;
-  background-color: yellow;
-}
-
-span.b {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 1px solid blue;
-  background-color: yellow;
-}
-
-span.c {
-  display: block;
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 1px solid blue;
-  background-color: yellow;
-}
-Try it Yourself »
-________________________________________
-Using inline-block to Create Navigation Links
-One common use for display: inline-block is to display list items horizontally instead of vertically. The following example creates horizontal navigation links:
-Example
-.nav {
-  background-color: yellow;
-  list-style-type: none;
-  text-align: center; 
-  padding: 0;
-  margin: 0;
-}
-
-.nav li {
-  display: inline-block;
-  font-size: 20px;
-  padding: 20px;
-}
-CSS Layout - Horizontal & Vertical Align
-
-▲▼
-◀►
-Center elements
-horizontally and vertically
-________________________________________
-Center Align Elements
-To horizontally center a block element (like <div>), use margin: auto;
-Setting the width of the element will prevent it from stretching out to the edges of its container.
-The element will then take up the specified width, and the remaining space will be split equally between the two margins:
-This div element is centered.
-Example
-.center {
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
-}
-Try it Yourself »
-Note: Center aligning has no effect if the width property is not set (or set to 100%).
-________________________________________
-Center Align Text
-To just center the text inside an element, use text-align: center;
-This text is centered.
-Example
-.center {
-  text-align: center;
-  border: 3px solid green;
-}
-Try it Yourself »
-Tip: For more examples on how to align text, see the CSS Text chapter.
-________________________________________
-________________________________________
-Center an Image
-To center an image, set left and right margin to auto and make it into a block element:
- 
-Example
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
-Try it Yourself »
-________________________________________
-Left and Right Align - Using position
-One method for aligning elements is to use position: absolute;:
-In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
-Example
-.right {
-  position: absolute;
-  right: 0px;
-  width: 300px;
-  border: 3px solid #73AD21;
-  padding: 10px;
-}
-Try it Yourself »
-Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.
-________________________________________
-Left and Right Align - Using float
-Another method for aligning elements is to use the float property:
-Example
-.right {
-  float: right;
-  width: 300px;
-  border: 3px solid #73AD21;
-  padding: 10px;
-}
-Try it Yourself »
-Note: If an element is taller than the element containing it, and it is floated, it will overflow outside of its container. You can use the "clearfix" hack to fix this (see example below).
-________________________________________
-The clearfix Hack
-Without Clearfix
- 
-With Clearfix
- 
-Then we can add overflow: auto; to the containing element to fix this problem:
-Example
-.clearfix {
-  overflow: auto;
-}
-Try it Yourself »
-________________________________________
-Center Vertically - Using padding
-There are many ways to center an element vertically in CSS. A simple solution is to use top and bottom padding:
-I am vertically centered.
-Example
-.center {
-  padding: 70px 0;
-  border: 3px solid green;
-}
-Try it Yourself »
-To center both vertically and horizontally, use padding and text-align: center:
-I am vertically and horizontally centered.
-Example
-.center {
-  padding: 70px 0;
-  border: 3px solid green;
-  text-align: center;
-}
-Try it Yourself »
-________________________________________
-Center Vertically - Using line-height
-Another trick is to use the line-height property with a value that is equal to the height property:
-I am vertically and horizontally centered.
-Example
-.center {
-  line-height: 200px;
-  height: 200px;
-  border: 3px solid green;
-  text-align: center;
-}
-
-/* If the text has multiple lines, add the following: */
-.center p {
-  line-height: 1.5;
-  display: inline-block;
-  vertical-align: middle;
-}
-Try it Yourself »
-________________________________________
-Center Vertically - Using position & transform
-If padding and line-height are not options, another solution is to use positioning and the transform property:
-I am vertically and horizontally centered.
-Example
-.center {
-  height: 200px;
-  position: relative;
-  border: 3px solid green;
-}
-
-.center p {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-Try it Yourself »
-Tip: You will learn more about the transform property in our 2D Transforms Chapter.
-________________________________________
-Center Vertically - Using Flexbox
-You can also use flexbox to center things. Just note that flexbox is not supported in IE10 and earlier versions:
-I am vertically and horizontally centered.
-Example
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  border: 3px solid green;
-}
-CSS Combinators
-________________________________________
-CSS Combinators
-A combinator is something that explains the relationship between the selectors.
-A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
-There are four different combinators in CSS:
-•	descendant selector (space)
-•	child selector (>)
-•	adjacent sibling selector (+)
-•	general sibling selector (~)
-________________________________________
-Descendant Selector
-The descendant selector matches all elements that are descendants of a specified element.
-The following example selects all <p> elements inside <div> elements: 
-Example
-div p {
-  background-color: yellow;
-}
-Try it Yourself »
-________________________________________
-Child Selector
-The child selector selects all elements that are the children of a specified element.
-The following example selects all <p> elements that are children of a <div> element:
-Example
-div > p {
-  background-color: yellow;
-}
-Try it Yourself »
-________________________________________
-________________________________________
-Adjacent Sibling Selector
-The adjacent sibling selector selects all elements that are the adjacent siblings of a specified element.
-Sibling elements must have the same parent element, and "adjacent" means "immediately following".
-The following example selects all <p> elements that are placed immediately after <div> elements:
-Example
-div + p {
-  background-color: yellow;
-}
-Try it Yourself »
-________________________________________
-General Sibling Selector
-The general sibling selector selects all elements that are siblings of a specified element.
-The following example selects all <p> elements that are siblings of <div> elements: 
-Example
-div ~ p {
-  background-color: yellow;
-}
-CSS Pseudo-classes
-What are Pseudo-classes?
-A pseudo-class is used to define a special state of an element.
-For example, it can be used to:
-•	Style an element when a user mouses over it
-•	Style visited and unvisited links differently
-•	Style an element when it gets focus
-Mouse Over Me
- 
-________________________________________
-Syntax
-The syntax of pseudo-classes:
-selector:pseudo-class {
-  property: value;
-}
-________________________________________
-Anchor Pseudo-classes
-Links can be displayed in different ways:
-Example
-/* unvisited link */
-a:link {
-  color: #FF0000;
-}
-
-/* visited link */
-a:visited {
-  color: #00FF00;
-}
-
-/* mouse over link */
-a:hover {
-  color: #FF00FF;
-}
-
-/* selected link */
-a:active {
-  color: #0000FF;
-}
-Try it Yourself »
-Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective! a:active MUST come after a:hover in the CSS definition in order to be effective! Pseudo-class names are not case-sensitive.
-________________________________________
-________________________________________
-Pseudo-classes and CSS Classes
-Pseudo-classes can be combined with CSS classes:
-When you hover over the link in the example, it will change color:
-Example
-a.highlight:hover {
-  color: #ff0000;
-}
-Try it Yourself »
-________________________________________
-Hover on <div>
-An example of using the :hover pseudo-class on a <div> element:
-Example
-div:hover {
-  background-color: blue;
-}
-Try it Yourself »
-________________________________________
-Simple Tooltip Hover
-Hover over a <div> element to show a <p> element (like a tooltip):
-Hover over me to show the <p> element.
-Example
-p {
-  display: none;
-  background-color: yellow;
-  padding: 20px;
-}
-
-div:hover p {
-  display: block;
-}
-Try it Yourself »
-________________________________________
-CSS - The :first-child Pseudo-class
-The :first-child pseudo-class matches a specified element that is the first child of another element.
-Match the first <p> element
-In the following example, the selector matches any <p> element that is the first child of any element:
-Example
-p:first-child {
-  color: blue;
-}
-Try it Yourself »
-________________________________________
-Match the first <i> element in all <p> elements
-In the following example, the selector matches the first <i> element in all <p> elements:
-Example
-p i:first-child {
-  color: blue;
-}
-Try it Yourself »
-________________________________________
-Match all <i> elements in all first child <p> elements
-In the following example, the selector matches all <i> elements in <p> elements that are the first child of another element:
-Example
-p:first-child i {
-  color: blue;
-}
-Try it Yourself »
-________________________________________
-CSS - The :lang Pseudo-class
-The :lang pseudo-class allows you to define special rules for different languages.
-In the example below, :lang defines the quotation marks for <q> elements with lang="no":
-Example
-<html>
-<head>
-<style>
-q:lang(no) {
-  quotes: "~" "~";
-}
-</style>
-</head>
-<body>
-
-<p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
-
-</body>
-</html>
-CSS Pseudo-elements
-What are Pseudo-Elements?
-A CSS pseudo-element is used to style specified parts of an element.
-For example, it can be used to:
-•	Style the first letter, or line, of an element
-•	Insert content before, or after, the content of an element
-________________________________________
-Syntax
-The syntax of pseudo-elements:
-selector::pseudo-element {
-  property: value;
-}
-________________________________________
-The ::first-line Pseudo-element
-The ::first-line pseudo-element is used to add a special style to the first line of a text.
-The following example formats the first line of the text in all <p> elements:
-Example 
-p::first-line {
-  color: #ff0000;
-  font-variant: small-caps;
-}
-Try it Yourself »
-Note: The ::first-line pseudo-element can only be applied to block-level elements.
-The following properties apply to the ::first-line pseudo-element:
-•	font properties
-•	color properties
-•	background properties
-•	word-spacing
-•	letter-spacing
-•	text-decoration
-•	vertical-align
-•	text-transform
-•	line-height
-•	clear
-Notice the double colon notation - ::first-line versus :first-line
-
-The double colon replaced the single-colon notation for pseudo-elements in CSS3. This was an attempt from W3C to distinguish between pseudo-classes and pseudo-elements.
-
-The single-colon syntax was used for both pseudo-classes and pseudo-elements in CSS2 and CSS1.
-
-For backward compatibility, the single-colon syntax is acceptable for CSS2 and CSS1 pseudo-elements.
-________________________________________
-________________________________________
-The ::first-letter Pseudo-element
-The ::first-letter pseudo-element is used to add a special style to the first letter of a text.
-The following example formats the first letter of the text in all <p> elements: 
-Example
-p::first-letter {
-  color: #ff0000;
-  font-size: xx-large;
-}
-Try it Yourself »
-Note: The ::first-letter pseudo-element can only be applied to block-level elements.
-The following properties apply to the ::first-letter pseudo- element: 
-•	font properties
-•	color properties 
-•	background properties
-•	margin properties
-•	padding properties
-•	border properties
-•	text-decoration
-•	vertical-align (only if "float" is "none")
-•	text-transform
-•	line-height
-•	float
-•	clear
-________________________________________
-Pseudo-elements and CSS Classes
-Pseudo-elements can be combined with CSS classes: 
-Example
-p.intro::first-letter {
-  color: #ff0000;
-  font-size: 200%;
-}
-Try it Yourself »
-The example above will display the first letter of paragraphs with class="intro", in red and in a larger size.
-________________________________________
-Multiple Pseudo-elements
-Several pseudo-elements can also be combined.
-In the following example, the first letter of a paragraph will be red, in an xx-large font size. The rest of the first line will be blue, and in small-caps. The rest of the paragraph will be the default font size and color:
-Example
-p::first-letter {
-  color: #ff0000;
-  font-size: xx-large;
-}
-
-p::first-line {
-  color: #0000ff;
-  font-variant: small-caps;
-}
-Try it Yourself »
-________________________________________
-CSS - The ::before Pseudo-element
-The ::before pseudo-element can be used to insert some content before the content of an element.
-The following example inserts an image before the content of each <h1> element:
-Example
-h1::before {
-  content: url(smiley.gif);
-}
-Try it Yourself »
-________________________________________
-CSS - The ::after Pseudo-element
-The ::after pseudo-element can be used to insert some content after the content of an element.
-The following example inserts an image after the content of each <h1> element:
-Example
-h1::after {
-  content: url(smiley.gif);
-}
-Try it Yourself »
-________________________________________
-CSS - The ::selection Pseudo-element
-The ::selection pseudo-element matches the portion of an element that is selected by a user.
-The following CSS properties can be applied to ::selection: color, background, cursor, and outline.
-The following example makes the selected text red on a yellow background:
-Example
-::selection {
-  color: red;
-  background: yellow;
-}
-CSS Opacity / Transparency
-The opacity property specifies the opacity/transparency of an element.
-________________________________________
-Transparent Image
-The opacity property can take a value from 0.0 - 1.0. The lower value, the more transparent:
- 
-opacity 0.2
- 
-opacity 0.5
- 
-opacity 1
-(default)
-Example
-img {
-  opacity: 0.5;
-}
-Try it Yourself »
-________________________________________
-Transparent Hover Effect
-The opacity property is often used together with the :hover selector to change the opacity on mouse-over:
- 
- 
- 
-Example
-img {
-  opacity: 0.5;
-}
-
-img:hover {
-  opacity: 1.0;
-}
-Try it Yourself »
-Example explained
-The first CSS block is similar to the code in Example 1. In addition, we have added what should happen when a user hovers over one of the images. In this case we want the image to NOT be transparent when the user hovers over it. The CSS for this is opacity:1;.
-When the mouse pointer moves away from the image, the image will be transparent again.
-An example of reversed hover effect:
- 
- 
- 
-Example
-img:hover {
-  opacity: 0.5;
-}
-Try it Yourself »
-________________________________________
-________________________________________
-Transparent Box
-When using the opacity property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a fully transparent element hard to read:
-opacity 1
-opacity 0.6
-opacity 0.3
-opacity 0.1
-Example
-div {
-  opacity: 0.3;
-}
-Try it Yourself »
-________________________________________
-Transparency using RGBA
-If you do not want to apply opacity to child elements, like in our example above, use RGBA color values. The following example sets the opacity for the background color and not the text:
-100% opacity
-60% opacity
-30% opacity
-10% opacity
-You learned from our CSS Colors Chapter, that you can use RGB as a color value. In addition to RGB, you can use an RGB color value with an alpha channel (RGBA) - which specifies the opacity for a color.
-An RGBA color value is specified with: rgba(red, green, blue, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
-Tip: You will learn more about RGBA Colors in our CSS Colors Chapter.
-Example
-div {
-  background: rgba(76, 175, 80, 0.3) /* Green background with 30% opacity */
-}
-Try it Yourself »
-________________________________________
-Text in Transparent Box
-This is some text that is placed in the transparent box.
-Example
-<html>
-<head>
-<style>
-div.background {
-  background: url(klematis.jpg) repeat;
-  border: 2px solid black;
-}
-
-div.transbox {
-  margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.6;
-}
-
-div.transbox p {
-  margin: 5%;
-  font-weight: bold;
-  color: #000000;
-}
-</style>
-</head>
-<body>
-
-<div class="background">
-  <div class="transbox">
-    <p>This is some text that is placed in the transparent box.</p>
-  </div>
-</div>
-
-</body>
-</html>
-Try it Yourself »
-Example explained
-First, we create a <div> element (class="background") with a background image, and a border.
-Then we create another <div> (class="transbox") inside the first <div>.
-The <div class="transbox"> have a background color, and a border - the div is transparent.
-Inside the transparent <div>, we add some text inside a <p> element.
-CSS Navigation Bar
-Demo: Navigation Bars
-Vertical
-•	Home
-•	News
-•	Contact
-•	About
-Horizontal
-•	Home
-•	News
-•	Contact
-•	About
-
-
-•	Home
-•	News
-•	Contact
-•	About
-________________________________________
-Navigation Bars
-Having easy-to-use navigation is important for any web site.
-With CSS you can transform boring HTML menus into good-looking navigation bars.
-________________________________________
-Navigation Bar = List of Links
-A navigation bar needs standard HTML as a base.
-In our examples we will build the navigation bar from a standard HTML list.
-A navigation bar is basically a list of links, so using the <ul> and <li> elements makes perfect sense:
-Example
-<ul>
-  <li><a href="default.asp">Home</a></li>
-  <li><a href="news.asp">News</a></li>
-  <li><a href="contact.asp">Contact</a></li>
-  <li><a href="about.asp">About</a></li>
-</ul>
-Try it Yourself »
-Now let's remove the bullets and the margins and padding from the list:
-Example
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-Try it Yourself »
-Example explained:
-•	list-style-type: none; - Removes the bullets. A navigation bar does not need list markers
-•	Set margin: 0; and padding: 0; to remove browser default settings
-The code in the example above is the standard code used in both vertical, and horizontal navigation bars, which you will learn more about in the next chapters.
-________________________________________
-CSS Dropdowns
-Create a hoverable dropdown with CSS.
-________________________________________
-Demo: Dropdown Examples
-Move the mouse over the examples below:
-Dropdown Text
-Dropdown Menu
-Other:  
-________________________________________
-Basic Dropdown
-Create a dropdown box that appears when the user moves the mouse over an element.
-Example
-<style>
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-</style>
-
-<div class="dropdown">
-  <span>Mouse over me</span>
-  <div class="dropdown-content">
-    <p>Hello World!</p>
-  </div>
-</div>
-Try it Yourself »
-Example Explained
-HTML) Use any element to open the dropdown content, e.g. a <span>, or a <button> element.
-Use a container element (like <div>) to create the dropdown content and add whatever you want inside of it.
-Wrap a <div> element around the elements to position the dropdown content correctly with CSS.
-CSS) The .dropdown class uses position:relative, which is needed when we want the dropdown content to be placed right below the dropdown button (using position:absolute).
-The .dropdown-content class holds the actual dropdown content. It is hidden by default, and will be displayed on hover (see below). Note the min-width is set to 160px. Feel free to change this. Tip: If you want the width of the dropdown content to be as wide as the dropdown button, set the width to 100% (and overflow:auto to enable scroll on small screens).
-Instead of using a border, we have used the CSS box-shadow property to make the dropdown menu look like a "card".
-The :hover selector is used to show the dropdown menu when the user moves the mouse over the dropdown button.
-________________________________________
-________________________________________
-Dropdown Menu
-Create a dropdown menu that allows the user to choose an option from a list:
-Dropdown Menu
-This example is similar to the previous one, except that we add links inside the dropdown box and style them to fit a styled dropdown button:
-Example
-<style>
-/* Style The Dropdown Button */
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
-</style>
-
-<div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-Try it Yourself »
-________________________________________
-Right-aligned Dropdown Content
-Left
-Right
-If you want the dropdown menu to go from right to left, instead of left to right, add right: 0;
-Example
-.dropdown-content {
-  right: 0;
-}
-
-Try it Yourself »
-________________________________________
-More Examples
-Dropdown Image
-How to add an image and other content inside the dropdown box.
-Hover over the image:
- 
-
-Try it Yourself »
-Dropdown Navbar
-How to add a dropdown menu inside a navigation bar.
-
-CSS Image Gallery
-CSS can be used to create an image gallery.
- 
-Add a description of the image here
- 
-Add a description of the image here
- 
-Add a description of the image here
- 
-Add a description of the image here
-________________________________________
-Image Gallery
-The following image gallery is created with CSS:
-Example
-<html>
-<head>
-<style>
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-</style>
-</head>
-<body>
-
-<div class="gallery">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_forest.jpg">
-    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_mountains.jpg">
-    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-</body>
-</html>
-Try it Yourself »
-________________________________________
-More Examples
-Responsive Image Gallery
-How to use CSS media queries to create a responsive image gallery that will look good on desktops, tablets and smart phones.
- 
-Try it Yourself »
-
-CSS Image Sprites
-________________________________________
-Image Sprites
-An image sprite is a collection of images put into a single image.
-A web page with many images can take a long time to load and generates multiple server requests.
-Using image sprites will reduce the number of server requests and save bandwidth.
-________________________________________
-Image Sprites - Simple Example
-Instead of using three separate images, we use this single image ("img_navsprites.gif"):
- 
-With CSS, we can show just the part of the image we need.
-In the following example the CSS specifies which part of the "img_navsprites.gif" image to show:
-Example
-#home {
-  width: 46px;
-  height: 44px;
-  background: url(img_navsprites.gif) 0 0;
-}
-Try it Yourself »
-Example explained:
-•	<img id="home" src="img_trans.gif"> - Only defines a small transparent image because the src attribute cannot be empty. The displayed image will be the background image we specify in CSS
-•	width: 46px; height: 44px; - Defines the portion of the image we want to use
-•	background: url(img_navsprites.gif) 0 0; - Defines the background image and its position (left 0px, top 0px)
-This is the easiest way to use image sprites, now we want to expand it by using links and hover effects.
-________________________________________
-Image Sprites - Create a Navigation List
-We want to use the sprite image ("img_navsprites.gif") to create a navigation list.
-We will use an HTML list, because it can be a link and also supports a background image:
-Example
-#navlist {
-  position: relative;
-}
-
-#navlist li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: absolute;
-  top: 0;
-}
-
-#navlist li, #navlist a {
-  height: 44px;
-  display: block;
-}
-
-#home {
-  left: 0px;
-  width: 46px;
-  background: url('img_navsprites.gif') 0 0;
-}
-
-#prev {
-  left: 63px;
-  width: 43px;
-  background: url('img_navsprites.gif') -47px 0;
-}
-
-#next {
-  left: 129px;
-  width: 43px;
-  background: url('img_navsprites.gif') -91px 0;
-}
-Try it Yourself »
-Example explained:
-•	#navlist {position:relative;} - position is set to relative to allow absolute positioning inside it
-•	#navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} - margin and padding are set to 0, list-style is removed, and all list items are absolute positioned
-•	#navlist li, #navlist a {height:44px;display:block;} - the height of all the images are 44px
-Now start to position and style for each specific part:
-•	#home {left:0px;width:46px;} - Positioned all the way to the left, and the width of the image is 46px
-•	#home {background:url(img_navsprites.gif) 0 0;} - Defines the background image and its position (left 0px, top 0px)
-•	#prev {left:63px;width:43px;} - Positioned 63px to the right (#home width 46px + some extra space between items), and the width is 43px.
-•	#prev {background:url('img_navsprites.gif') -47px 0;} - Defines the background image 47px to the right (#home width 46px + 1px line divider)
-•	#next {left:129px;width:43px;}- Positioned 129px to the right (start of #prev is 63px + #prev width 43px + extra space), and the width is 43px.
-•	#next {background:url('img_navsprites.gif') -91px 0;} - Defines the background image 91px to the right (#home width 46px + 1px line divider + #prev width 43px + 1px line divider )
-________________________________________
-________________________________________
-Image Sprites - Hover Effect
-Now we want to add a hover effect to our navigation list.
-Tip: The :hover selector can be used on all elements, not only on links.
-Our new image ("img_navsprites_hover.gif") contains three navigation images and three images to use for hover effects:
- 
-Because this is one single image, and not six separate files, there will be no loading delay when a user hovers over the image.
-We only add three lines of code to add the hover effect:
-Example
-#home a:hover {
-  background: url('img_navsprites_hover.gif') 0 -45px;
-}
-
-#prev a:hover {
-  background: url('img_navsprites_hover.gif') -47px -45px;
-}
-
-#next a:hover {
-  background: url('img_navsprites_hover.gif') -91px -45px;
-}
-Try it Yourself »
-Example explained:
-•	#home a:hover {background: transparent url('img_navsprites_hover.gif') 0 -45px;} - For all three hover images we specify the same background position, only 45px further down
-CSS Attribute Selectors
-Style HTML Elements With Specific Attributes
-It is possible to style HTML elements that have specific attributes or attribute values.
-________________________________________
-CSS [attribute] Selector
-The [attribute] selector is used to select elements with a specified attribute.
-The following example selects all <a> elements with a target attribute:
-Example
-a[target] {
-  background-color: yellow;
-}
-Try it Yourself »
-________________________________________
-CSS [attribute="value"] Selector
-The [attribute="value"] selector is used to select elements with a specified attribute and value.
-The following example selects all <a> elements with a target="_blank" attribute:
-Example
-a[target="_blank"] {
-  background-color: yellow;
-}
-Try it Yourself »
-________________________________________
-CSS [attribute~="value"] Selector
-The [attribute~="value"] selector is used to select elements with an attribute value containing a specified word.
-The following example selects all elements with a title attribute that contains a space-separated list of words, one of which is "flower":
-Example
-[title~="flower"] {
-  border: 5px solid yellow;
-}
-Try it Yourself »
-The example above will match elements with title="flower", title="summer flower", and title="flower new", but not title="my-flower" or title="flowers".
-________________________________________
-________________________________________
-CSS [attribute|="value"] Selector
-The [attribute|="value"] selector is used to select elements with the specified attribute starting with the specified value.
-The following example selects all elements with a class attribute value that begins with "top":
-Note: The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text"! 
-Example
-[class|="top"] {
-  background: yellow;
-}
-Try it Yourself »
-________________________________________
-CSS [attribute^="value"] Selector
-The [attribute^="value"] selector is used to select elements whose attribute value begins with a specified value.
-The following example selects all elements with a class attribute value that begins with "top":
-Note: The value does not have to be a whole word! 
-Example
-[class^="top"] {
-  background: yellow;
-}
-Try it Yourself »
-________________________________________
-CSS [attribute$="value"] Selector
-The [attribute$="value"] selector is used to select elements whose attribute value ends with a specified value.
-The following example selects all elements with a class attribute value that ends with "test":
-Note: The value does not have to be a whole word!  
-Example
-[class$="test"] {
-  background: yellow;
-}
-Try it Yourself »
-________________________________________
-CSS [attribute*="value"] Selector
-The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value.
-The following example selects all elements with a class attribute value that contains "te":
-Note: The value does not have to be a whole word!  
-Example
-[class*="te"] {
-  background: yellow;
-}
-Try it Yourself »
-________________________________________
-Styling Forms
-The attribute selectors can be useful for styling forms without class or ID:
-Example
-input[type="text"] {
-  width: 150px;
-  display: block;
-  margin-bottom: 10px;
-  background-color: yellow;
-}
-
-input[type="button"] {
-  width: 120px;
-  margin-left: 35px;
-  display: block;
-}
-
-CSS Forms
-The look of an HTML form can be greatly improved with CSS:
-First Name   Last Name   Country                Try it Yourself »
-________________________________________
-Styling Input Fields
-Use the width property to determine the width of the input field:
-First Name  
-Example
-input {
-  width: 100%;
-}
-Try it Yourself »
-The example above applies to all <input> elements. If you only want to style a specific input type, you can use attribute selectors:
-•	input[type=text] - will only select text fields
-•	input[type=password] - will only select password fields
-•	input[type=number] - will only select number fields
-•	etc..
-________________________________________
-________________________________________
-Padded Inputs
-Use the padding property to add space inside the text field.
-Tip: When you have many inputs after each other, you might also want to add some margin, to add more space outside of them:
-First Name   Last Name  
-Example
-input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-Try it Yourself »
-Note that we have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are included in the total width and height of the elements.
-Read more about the box-sizing property in our CSS Box Sizing chapter.
-________________________________________
-Bordered Inputs
-Use the border property to change the border size and color, and use the border-radius property to add rounded corners:
-First Name  
-Example
-input[type=text] {
-  border: 2px solid red;
-  border-radius: 4px;
-}
-Try it Yourself »
-If you only want a bottom border, use the border-bottom property:
-First Name  
-Example
-input[type=text] {
-  border: none;
-  border-bottom: 2px solid red;
-}
-Try it Yourself »
-________________________________________
-Colored Inputs
-Use the background-color property to add a background color to the input, and the color property to change the text color:
- 
-Example
-input[type=text] {
-  background-color: #3CBC8D;
-  color: white;
-}
-Try it Yourself »
-________________________________________
-Focused Inputs
-By default, some browsers will add a blue outline around the input when it gets focus (clicked on). You can remove this behavior by adding outline: none; to the input.
-Use the :focus selector to do something with the input field when it gets focus:
- 
-Example
-input[type=text]:focus {
-  background-color: lightblue;
-}
-Try it Yourself »
- 
-Example
-input[type=text]:focus {
-  border: 3px solid #555;
-}
-Try it Yourself »
-________________________________________
-Input with icon/image
-If you want an icon inside the input, use the background-image property and position it with the background-position property. Also notice that we add a large left padding to reserve the space of the icon:
- 
-Example
-input[type=text] {
-  background-color: white;
-  background-image: url('searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding-left: 40px;
-}
-Try it Yourself »
-________________________________________
-Animated Search Input
-In this example we use the CSS transition property to animate the width of the search input when it gets focus. You will learn more about the transition property later, in our CSS Transitions chapter.
- 
-Example
-input[type=text] {
-  transition: width 0.4s ease-in-out;
-}
-
-input[type=text]:focus {
-  width: 100%;
-}
-Try it Yourself »
-________________________________________
-Styling Textareas
-Tip: Use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom right corner):
- 
-Example
-textarea {
-  width: 100%;
-  height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  resize: none;
-}
-Try it Yourself »
-________________________________________
-Styling Select Menus
-              
-Example
-select {
-  width: 100%;
-  padding: 16px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #f1f1f1;
-}
-Try it Yourself »
-________________________________________
-Styling Input Buttons
- 
-Example
-input[type=button], input[type=submit], input[type=reset] {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-/* Tip: use width: 100% for full-width buttons */
-Try it Yourself »
-For more information about how to style buttons with CSS, read our CSS Buttons Tutorial.
-________________________________________
-Responsive Form
-Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.
-Advanced: The following example use media queries to create a responsive form. You will learn more about this in a later chapter.
- Try it Yourself »
-
-CSS Counters
-________________________________________
-Pizza
-Hamburger
-Hotdogs
-CSS counters are "variables" maintained by CSS whose values can be incremented by CSS rules (to track how many times they are used). Counters let you adjust the appearance of content based on its placement in the document.
-________________________________________
-Automatic Numbering With Counters
-CSS counters are like "variables". The variable values can be incremented by CSS rules (which will track how many times they are used).
-To work with CSS counters we will use the following properties:
-•	counter-reset - Creates or resets a counter
-•	counter-increment - Increments a counter value
-•	content - Inserts generated content
-•	counter() or counters() function - Adds the value of a counter to an element
-To use a CSS counter, it must first be created with counter-reset.
-The following example creates a counter for the page (in the body selector), then increments the counter value for each <h2> element and adds "Section <value of the counter>:" to the beginning of each <h2> element:
-Example
-body {
-  counter-reset: section;
-}
-
-h2::before {
-  counter-increment: section;
-  content: "Section " counter(section) ": ";
-}
-Try it Yourself »
-________________________________________
-________________________________________
-Nesting Counters
-The following example creates one counter for the page (section) and one counter for each <h1> element (subsection). The "section" counter will be counted for each <h1> element with "Section <value of the section counter>.", and the "subsection" counter will be counted for each <h2> element with "<value of the section counter>.<value of the subsection counter>":
-Example
-body {
-  counter-reset: section;
-}
-
-h1 {
-  counter-reset: subsection;
-}
-
-h1::before {
-  counter-increment: section;
-  content: "Section " counter(section) ". ";
-}
-
-h2::before {
-  counter-increment: subsection;
-  content: counter(section) "." counter(subsection) " ";
-}
-Try it Yourself »
-A counter can also be useful to make outlined lists because a new instance of a counter is automatically created in child elements. Here we use the counters() function to insert a string between different levels of nested counters:
-Example
-ol {
-  counter-reset: section;
-  list-style-type: none;
-}
-
-li::before {
-  counter-increment: section;
-  content: counters(section,".") " ";
-}
-Try it Yourself »
-________________________________________
- CSS Counter Properties
-Property	Description
-content
-Used with the ::before and ::after pseudo-elements, to insert generated content
-counter-increment
-Increments one or more counter values
-counter-reset
-Creates or resets one or more counters
-
-CSS Website Layout
-________________________________________
-Website Layout
-A website is often divided into headers, menus, content and a footer:
-There are tons of different layout designs to choose from. However, the structure above, is one of the most common, and we will take a closer look at it in this tutorial.
-________________________________________
-Header
-A header is usually located at the top of the website (or right below a top navigation menu). It often contains a logo or the website name:
-Example
-.header {
-  background-color: #F1F1F1;
-  text-align: center;
-  padding: 20px;
-}
-Result
-Header
-Try it Yourself »
-________________________________________
-________________________________________
-Navigation Bar
-A navigation bar contains a list of links to help visitors navigating through your website:
-Example
-/* The navbar container */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Navbar links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Links - change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-Result
-LinkLinkLink
-Try it Yourself »
-________________________________________
-Content
-The layout in this section, often depends on the target users. The most common layout is one (or combining them) of the following:
-•	1-column (often used for mobile browsers)
-•	2-column (often used for tablets and laptops)
-•	3-column layout (only used for desktops)
-1-column:
-2-column:
-3-column:
-We will create a 3-column layout, and change it to a 1-column layout on smaller screens:
-Example
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-Result
-Column
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
-Column
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
-Column
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.
-Try it Yourself »
-Tip: To create a 2-column layout, change the width to 50%. To create a 4-column layout, use 25%, etc.
-Tip: Do you wonder how the @media rule works? Read more about it in our CSS Media Queries chapter.
-Tip: A more modern way of creating column layouts, is to use CSS Flexbox. However, it is not supported in Internet Explorer 10 and earlier versions. If you require IE6-10 support, use floats (as shown above).
-
-To learn more about the Flexible Box Layout Module, read our CSS Flexbox chapter.
-________________________________________
-Unequal Columns
-The main content is the biggest and the most important part of your site.
-It is common with unequal column widths, so that most of the space is reserved for the main content. The side content (if any) is often used as an alternative navigation or to specify information relevant to the main content. Change the widths as you like, only remember that it should add up to 100% in total:
-Example
-.column {
-  float: left;
-}
-
-/* Left and right column */
-.column.side {
-  width: 25%;
-}
-
-/* Middle column */
-.column.middle {
-  width: 50%;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
-}
-Result
-Side
-Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-Main Content
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
-Side
-Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-Try it Yourself »
-________________________________________
-Footer
-The footer is placed at the bottom of your page. It often contains information like copyright and contact info:
-Example
-.footer {
-  background-color: #F1F1F1;
-  text-align: center;
-  padding: 10px;
-}
-Result
-Footer
-Try it Yourself »
-________________________________________
-Responsive Website Layout
-By using some of the CSS code above, we have created a responsive website layout, which varies between two columns and full-width columns depending on screen width:
-Try it Yourself »
-CSS Units
-CSS Units
-CSS has several different units for expressing a length.
-Many CSS properties take "length" values, such as width, margin, padding, font-size, etc.
-Length is a number followed by a length unit, such as 10px, 2em, etc.
-A whitespace cannot appear between the number and the unit. However, if the value is 0, the unit can be omitted.
-For some CSS properties, negative lengths are allowed.
-There are two types of length units: absolute and relative.
-________________________________________
-Absolute Lengths
-The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
-Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, they can be used if the output medium is known, such as for print layout.
-Unit	Description
-cm	centimetersTry it
-
-mm	millimetersTry it
-
-in	inches (1in = 96px = 2.54cm)Try it
-
-px *	pixels (1px = 1/96th of 1in)Try it
-
-pt	points (1pt = 1/72 of 1in)Try it
-
-pc	picas (1pc = 12 pt)Try it
-
-* Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution screens 1px implies multiple device pixels.
-________________________________________
-Relative Lengths
-Relative length units specify a length relative to another length property. Relative length units scales better between different rendering mediums.
-Unit	Description	
-em	Relative to the font-size of the element (2em means 2 times the size of the current font)	Try it
-
-ex	Relative to the x-height of the current font (rarely used)	Try it
-
-ch	Relative to width of the "0" (zero)	Try it
-
-rem	Relative to font-size of the root element	Try it
-
-vw	Relative to 1% of the width of the viewport*	Try it
-
-vh	Relative to 1% of the height of the viewport*	Try it
-
-vmin	Relative to 1% of viewport's* smaller dimension	Try it
-
-vmax	Relative to 1% of viewport's* larger dimension	Try it
-
-%	Relative to the parent element	Try it
-
-Tip: The em and rem units are practical in creating perfectly scalable layout!
-* Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
-________________________________________
-________________________________________
-Browser Support
-The numbers in the table specify the first browser version that fully supports the length unit.
-Length Unit					
-em, ex, %, px, cm, mm, in, pt, pc	1.0	3.0	1.0	1.0	3.5
-ch	27.0	9.0	1.0	7.0	20.0
-rem	4.0	9.0	3.6	4.1	11.6
-vh, vw	20.0	9.0	19.0	6.0	20.0
-vmin	20.0	9.0*	19.0	6.0	20.0
-vmax	26.0	Not supported	19.0	7.0	20.0
-Note: Internet Explorer 9 supports vmin with the non-standard name: vm.
-CSS Specificity
-________________________________________
-What is Specificity?
-If there are two or more conflicting CSS rules that point to the same element, the browser follows some rules to determine which one is most specific and therefore wins out.
-Think of specificity as a score/rank that determines which style declarations are ultimately applied to an element.
-The universal selector (*) has low specificity, while ID selectors are highly specific! 
-Note: Specificity is a common reason why your CSS-rules don't apply to some elements, although you think they should.
-________________________________________
-Specificity Hierarchy
-Every selector has its place in the specificity hierarchy. There are four categories which define the specificity level of a selector:
-Inline styles - An inline style is attached directly to the element to be styled. Example: <h1 style="color: #ffffff;">.
-IDs - An ID is a unique identifier for the page elements, such as #navbar.
-Classes, attributes and pseudo-classes - This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc.
-Elements and pseudo-elements - This category includes element names and pseudo-elements, such as h1, div, :before and :after.
-________________________________________
-How to Calculate Specificity?
-Memorize how to calculate specificity!
-Start at 0, add 1000 for style attribute, add 100 for each ID, add 10 for each attribute, class or pseudo-class, add 1 for each element name or pseudo-element.
-Consider these three code fragments:
-Example
-A: h1
-B: #content h1
-C: <div id="content"><h1 style="color: #ffffff">Heading</h1></div>
-The specificity of A is 1 (one element)
-The specificity of B is 101 (one ID reference and one element)
-The specificity of C is 1000 (inline styling)
-Since 1 < 101 < 1000, the third rule (C) has a greater level of specificity, and therefore will be applied.
-________________________________________
-________________________________________
-Specificity Rules
-Equal specificity: the latest rule counts - If the same rule is written twice into the external style sheet, then the lower rule in the style sheet is closer to the element to be styled, and therefore will be applied:
-Example
-h1 {background-color: yellow;}
-h1 {background-color: red;}
-Try it Yourself »
-the latter rule is always applied.
-________________________________________
-ID selectors have a higher specificity than attribute selectors - Look at the following three code lines:
-Example
-div#a {background-color: green;}
-#a {background-color: yellow;}
-div[id=a] {background-color: blue;}
-Try it Yourself »
-the first rule is more specific than the other two, and will be applied.
-________________________________________
-Contextual selectors are more specific than a single element selector - The embedded style sheet is closer to the element to be styled. So in the following situation
-Example
-From external CSS file:
-#content h1 {background-color: red;}
-
-In HTML file:
-<style>
-#content h1 {
-  background-color: yellow;
-}
-</style>
-the latter rule will be applied.
-________________________________________
-A class selector beats any number of element selectors - a class selector such as .intro beats h1, p, div, etc:
-Example
-.intro {background-color: yellow;}
-h1 {background-color: red;}
-Try it Yourself »
-________________________________________
-The universal selector and inherited values have a specificity of 0 - *, body * and similar have a zero specificity. Inherited values also have a specificity of 0.
-
-
-            </main>
-        </section>
-
-        
-
-        <!--Footer-->
-        <footer>
-            <p>Developed and designed by Lerato Rampai</p>
-            <p>Connect with me on facebook twitter linkedin instagram</p>
-        <footer>
-    </body>
-</html>
+                </section>
